@@ -1,0 +1,7 @@
+url: https://github.com/1420079678-ctrl/agent-body/tree/main/workspace/plugins/dsh-cortex
+name: 1420079678-ctrl/agent-body#cortex
+category: memory
+tarball: https://github.com/1420079678-ctrl/agent-body/releases/download/v0.1.0/dsh-external-dsh-cortex-0.1.0.tgz
+description:
+  zh: "睡眠、长期记忆与巩固。清醒信号取自会话推进（而非工具调用或心跳），静默 2 分钟浅睡、5 分钟深睡，深睡中每 2 分钟跑一轮零模型调用的确定性巩固，把经历提炼成记忆卡（坑 / 打法 / 薄弱环节 / 未解 / 事实）；记忆按 168 小时半衰期衰减，权重低于阈值即归档而非删除。新命令进来时按标签与正文确定性打分，召回最相关的记忆卡注入上下文——只有真正注入了才记去重 key。另含稳态告警降噪：窗口内重复告警只计数不刷屏，反复出现且从未自愈的收敛为「已知稳态偏移」并静默。3 个工具：cortex_sleep / cortex_memory / cortex_homeo。零外部依赖。"
+  en: "Sleep, long-term memory and consolidation. Wakefulness is driven by conversation progress rather than tool calls or heartbeats: two idle minutes mean light sleep, five mean deep sleep, and deep sleep runs a deterministic consolidation pass every two minutes with zero model calls, mining experience into memory cards (pitfall / playbook / hotspot / unresolved / fact). Cards decay on a 168-hour half-life and archive below a weight threshold instead of being deleted. A new command is scored deterministically against card tags and body text, and only the most relevant cards are injected — a deduplication key is recorded only when a card was actually injected. Also de-noises homeostasis alerts: repeats inside a window are counted rather than re-printed, and an alert that recurs without ever self-healing converges into a known steady-state offset and goes quiet. 3 tools: cortex_sleep / cortex_memory / cortex_homeo. Zero external dependencies."
