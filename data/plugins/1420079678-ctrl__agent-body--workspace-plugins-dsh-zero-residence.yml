@@ -1,0 +1,7 @@
+url: https://github.com/1420079678-ctrl/agent-body/tree/main/workspace/plugins/dsh-zero-residence
+name: 1420079678-ctrl/agent-body#zero-residence
+category: usage
+tarball: https://github.com/1420079678-ctrl/agent-body/releases/download/v0.1.0/dsh-external-dsh-zero-residence-0.1.0.tgz
+description:
+  zh: "零驻留上下文引擎：把过大的工具载荷从活动上下文中驱逐出去，只留指针与叙述头部，同时把它们存进可查询的持久存储；需要原文时按工具调用 id 逐字重建——内容从未丢失，只是不再驻留。于是每轮提示词 token 不再随 transcript 线性增长。自带注意力积分账本（每步上下文大小的累计）与三段成本分解。4 个工具：zr_compact / zr_recall / zr_ledger / zr_fast。零外部依赖。"
+  en: "Zero-residence context engine: evicts oversized tool payloads out of the live context, keeps a pointer plus a narrative head, and stores the payload in a queryable durable store; the original text is rebuilt verbatim from the tool-call id when anything asks for it — content is never lost, it just stops residing. Per-turn prompt tokens therefore stop growing linearly with the transcript. Ships an attention ledger (the running sum of per-step context size) and a three-part cost breakdown. 4 tools: zr_compact / zr_recall / zr_ledger / zr_fast. Zero external dependencies."
