@@ -457,6 +457,7 @@ dsh plugin --profile web add dshmarket
 - [Max-Null/dsh-node-appearance](https://github.com/Max-Null/dsh-node-appearance) — DeepSeek Harness Web GUI 会话节点外观插件：按节点类别/工具名可配置着色（左侧色条 + 淡色底），附带"显示思考过程"开关；纯前端渲染增强，改动即时生效并持久化到 DSH 用户设置文件。
 - [Max-Null/dsh-quick-toolbar](https://github.com/Max-Null/dsh-quick-toolbar) — 插钮聚合器（载体+驻场 LLM 范式）：把任何插件的散落按钮聚合到统一入口（SSiD 标题栏 / web 悬浮球）——LLM 按环境注册、右键删除=注销，纯数据零代码，不动插件源码。
 - [MDR-EX1000/dsh-desktop-kit](https://github.com/MDR-EX1000/dsh-desktop-kit) — 把 DSH Web UI 装进原生 macOS 桌面窗口：插件 + 轻量 Tauri/WKWebView 外壳跑在同一个 loopback 地址上——真 macOS 全屏、单实例、外链交给系统浏览器、类浏览器页面缩放。
+- [meihaoyidian/life-workbench](https://github.com/meihaoyidian/life-workbench) — 个人工作台面板：总览仪表盘、自定义看板、随手记与资料库，数据由 Host 持久化到本地 JSON。
 - [melt502/DSH-Session-Reference-UX-Patch](https://github.com/melt502/DSH-Session-Reference-UX-Patch) — 可回滚的 DSH Desktop 会话引用体验补丁安装器——@ 菜单当前工作区优先、标题优先展示、两行布局，以及侧边栏拖拽会话到输入区形成引用。
 - [MEMZ-JZY/DSH-Claude-Style-Reasoning-Slider](https://github.com/MEMZ-JZY/DSH-Claude-Style-Reasoning-Slider) — Claude 风格动画推理等级滑块与模型选择器，替换原生模型选择器。
 - [mengyun233/dsh-codex-pet](https://github.com/mengyun233/dsh-codex-pet) — 把 Codex 桌宠皮肤自动迁移到 DSH：右下角动画桌宠随 agent 状态实时变化（思考/工具/等待批准/出错/完成），多会话毛玻璃对话框 + 完整设置面板。
@@ -727,6 +728,7 @@ dsh plugin --profile web add dshmarket
 - [xyAxzy/dsh-conversation-map](https://github.com/xyAxzy/dsh-conversation-map) — DSH 对话地图：当前工作区全部会话的实时树状图，子代理谱系、运行状态一目了然，双击即跳转。
 - [Y1X1n/dsh-prompt-optimizer](https://github.com/Y1X1n/dsh-prompt-optimizer) — 在输入框旁加「优化」按钮：流式分析并改写提示词草稿，支持会话上下文感知（模板/润色双策略）、跨编辑记忆链与撤回，模型路由带 fallback 与连通性测试。
 - [yangdongzhen590/dsh-knj-menu](https://github.com/yangdongzhen590/dsh-knj-menu) — 第三方菜单管理器：统一收纳第三方插件的新增菜单入口，提供常规折叠与固定菜单项。
+- [yangdongzhen590/dsh-knj-prompts](https://github.com/yangdongzhen590/dsh-knj-prompts) — 提示词场景选择器：下拉选场景即自动开新会话并填充提示词（支持 {变量}），微调即可发送。
 - [yanglingrise/dsh-erii-boot-splash](https://github.com/yanglingrise/dsh-erii-boot-splash) — 绘梨衣（Sakura）主题启动加载动画——樱花瓣飘落、头戴樱花的小怪兽、粉色进度条，约 3 秒自动淡出且不阻挡操作。
 - [yangshen830-eng/dsh-editor](https://github.com/yangshen830-eng/dsh-editor) — VS Code 风格代码编辑器：侧边栏文件树浏览工作区，Monaco 编辑，文件读写，Git 状态与差异，搜索与 Markdown 预览。
 - [YannZhou/dsh-about](https://github.com/YannZhou/dsh-about) — 在 DeepSeek Harness 设置中心增加「关于」分区：版本信息、npm 检查更新与一键安装（自动重启）、GitHub 版本更新记录。
@@ -1599,6 +1601,7 @@ dsh plugin --profile web add dshmarket
 - [XXXXXQ-0206/dsh-session-delete](https://github.com/XXXXXQ-0206/dsh-session-delete) — 在原生会话操作菜单中加入「删除」，并提供支持搜索、排序、工作区分组、消息预览、批量恢复与按工作区彻底清除的会话回收站；活跃会话受到保护。
 - [y2zyyr/smart-session-title](https://github.com/y2zyyr/smart-session-title) — 会话标题 provider 替换插件：先把过长或代码密集的首条 Prompt 压缩再调用模型（实测 DSH 版本的内建 provider 在超过 4096 bytes 时直接拒绝、不调用模型），遇到纯问候则等待真正的任务。默认使用该会话自身的 provider 与 model，保护人工标题；标题规则支持字数上限、可选日期前后缀、风格、语言与排除词，并可按会话锁定标题。还可批量重优化历史会话标题，进度浮层在关闭设置页后继续运行。
 - [yamingmou/dsh-retrace](https://github.com/yamingmou/dsh-retrace) — 撤回/编辑重发/重新生成，加上单会话版本化：每次回退的时间线、产物回退（git 优先、快照兜底）、分叉图、会话谱系，以及实时看门狗（并发写入第一时间快照日志）。编辑前自动停止运行中的 agent（官方 cancel/whenIdle），回退不会损坏持久化日志、也不会破坏 /compact。
+- [yangdongzhen590/dsh-knj-session-management](https://github.com/yangdongzhen590/dsh-knj-session-management) — DSH 会话管理：归档、恢复、删除持久化会话，按工作区限制会话数量上限，并提供体积治理面板。
 - [yangyizhu8/dsh-session-handoff](https://github.com/yangyizhu8/dsh-session-handoff) — 会话工作移交：会话行菜单一键移交，新会话按八节交接包复刻老会话的记忆、任务与铁律，原始上下文经按需回读保持轻量。
 - [yangyizhu8/dsh-unread-mark](https://github.com/yangyizhu8/dsh-unread-mark) — 会话行未读标记：会话菜单新增「标记未读」「取消标记」，在会话标题前钉一个刷新与点开都不会消失的红点（与系统绿点区分），绿点存在时两项禁用，标记经服务端持久化。
 - [yangyongzhen/dsh-session-export](https://github.com/yangyongzhen/dsh-session-export) — 会话导出为 Markdown/JSON，便于复盘、重放与单会话成本汇总。
@@ -2880,6 +2883,7 @@ dsh plugin --profile web add dshmarket
 - [xsoc1/math-research-dsh](https://github.com/xsoc1/math-research-dsh) — 严谨开放数学研究套件：4 个 agent skill（rigorous-open-math-research、manage-math-research-program、math-research-workflow、lean-verify），覆盖对抗性审计的定理求解、研究项目管理、流水线编排与 Lean 4 形式化审计；CI 测试与机械式上游同步。
 - [xulelenlp/dsh-web-artifact-designer](https://github.com/xulelenlp/dsh-web-artifact-designer) — 面向 DSH 的设计稿生成 skill（改编自 Anthropic canvas-design / web-artifacts-builder）：把设计需求做成可直接打开的自包含 HTML/SVG 设计稿（海报、信息图、落地页、图表、组件稿），内置交付前质量清单与「去 AI 味」反模式清单。
 - [yahoolcj/dsh-plugin-zerone](https://github.com/yahoolcj/dsh-plugin-zerone) — 会进化的项目级 Agent：以 SDD 规格驱动掌舵全流程，内置 16 个技能覆盖澄清、PRD、issue、编码、定位、验收、审查；会记忆、会沉淀，越用越懂你的项目。
+- [yangdongzhen590/dsh-knj-extension-center](https://github.com/yangdongzhen590/dsh-knj-extension-center) — 技能中心：按区域浏览技能、从 zip 安装，并支持启用停用、卸载、回收站恢复与搜索。
 - [yanglaofish/dsh-skill-manager](https://github.com/yanglaofish/dsh-skill-manager) — DeepSeek Harness 技能生命周期管理：技能库（纯技能池）、工作区启用白名单、会话勾选三层模型；Web 设置面板与对话页内嵌视图，支持技能文件浏览/编辑、zip 与文件夹批量导入、引擎实际加载校验。
 - [yinhcao/yinchao-ai-music](https://github.com/yinhcao/yinchao-ai-music-skill) — 根据提示词或歌词生成完整 AI 歌曲和 BGM，并支持参考音频创作与歌曲续写。
 - [Ylight-cpu/dsh-creative-studio](https://github.com/Ylight-cpu/dsh-creative-studio) — 面向 DeepSeek Harness 的美工与视频剪辑工具包——可分档抠图、局部重绘改图、标题与 logo 合成、平台规格批量导出与图片体检；视频侧含 AI 抠像换背景（RVM ONNX，另有绿幕色键路径）、淡入/滑入/打字机/卡拉OK 动效文字、53 种转场与风格化变体、光效与调色预设（支持 LUT），以及素材通览、精确裁切、字幕烧入、配乐混音与平台规格导出；通过内置引导脚本自备本地 Python 运行时。
