@@ -690,7 +690,7 @@ dsh plugin --profile web add dshmarket
 - [WsTe47/dsh-step-clock](https://github.com/WsTe47/dsh-step-clock) — 在网页版输入框上方用一句中文显示当前正在执行的智能体步骤：步号、正在执行的工具、以及已运行多久。步骤结束后会保留该步用时，直到下一步开始，因此慢步骤事后也能查证。
 - [wsxwj123/dsh-plugins#dsh-composer-tools](https://github.com/wsxwj123/dsh-plugins/tree/main/packages/dsh-composer-tools) — 输入框工具集：方向键调取历史消息（限首/末行触发，兼容输入法与命令菜单）、指令查看/编辑器（全局与项目级 AGENTS.md / CLAUDE.md）、提示词库（780 条中文提示词，源自 Cherry Studio agents-zh 语料，AGPL-3.0，一键插入输入框）。npm 包名 `dsh-composer-tools`。
 - [wsxwj123/dsh-plugins#dsh-turn-scrubber](https://github.com/wsxwj123/dsh-plugins/tree/main/packages/dsh-turn-scrubber) — 右侧紧凑回合刻度条，悬停显示回合摘要，点击跳转到对应用户回合。npm 包名 `dsh-turn-scrubber`。
-- [wszhoho/dsh-file-attachment](https://github.com/wszhoho/dsh-file-attachment) — dsh web GUI 的文件附件插件：工具栏上传按钮（可多选）+ 拖拽/粘贴为输入框附加文件；图片走既有草稿图片流程，文档全文落盘到会话工作区 .dsh-file-attachment/ 并插入 @绝对路径引用；设置页可配置允许的上传类型；支持 PC 与移动端浏览器，兼容 dsh 预发布版本（0.1.1-rc、0.1.2-alpha，含 alpha.5）。
+- [wszhoho/dsh-file-attachment](https://github.com/wszhoho/dsh-file-attachment) — 拖拽/粘贴/上传文件和图片，非多模态模型下图片自动调用已配置 VLM 识别。
 - [WuJiaoJue/dsh-suggest-ghost](https://github.com/WuJiaoJue/dsh-suggest-ghost) — 给 DSH 输入框加上输入预测：回合结束后自动建议你的下一句话，Tab 一键采纳；输入时按会话历史做前缀补全。（输入预测 / 自动补全 / 提示词建议 / 补全）
 - [wuwaka/dsh-clipboard-menu](https://github.com/wuwaka/dsh-clipboard-menu) — 在没有自带右键菜单的桌面外壳中为 DeepSeek Harness 补上右键菜单：输入框内的剪切、复制、粘贴、全选，别处选中文字的复制与复制为纯文本，以及用可配置引擎在默认浏览器中搜索。
 - [wwumit/dsh-phone#client](https://github.com/wwumit/dsh-phone/tree/main/client) — 苹果风格智能体手机：双面板电话/短信、RCS 群聊（信任门禁）、跨设备智能体消息（registry 收件箱桥）、L0–L4 信任徽章与证据审计。实验性：信任摘要非安全保证，短信/信令经运营方收件箱中继（运营方可见）；E2E 加密为演进方向。
@@ -1127,7 +1127,7 @@ dsh plugin --profile web add dshmarket
 - [w4xxx/dsh-xia-plugins#packages/client-game-assistant](https://github.com/w4xxx/dsh-xia-plugins/tree/main/packages/client-game-assistant) — DSH Web 界面的樱花主题与陪伴功能：审批/任务/回答提醒、消息朗读、语音设置。
 - [Waldsatte/dsh-theme-taojian](https://github.com/Waldsatte/dsh-theme-taojian) — 陶笺：奶油纸浅色主题，陶橙强调色，界面思源宋，代码 Cascadia Mono。非官方，与 Anthropic、DeepSeek 无关。
 - [wbaws/dsh-scenery](https://github.com/wbaws/dsh-scenery) — DSH 氛围背景插件，支持壁纸、底部深色渐变与输入框光晕。
-- [webkubor/dsh-bloom-theme](https://github.com/webkubor/dsh-bloom-theme) — Bloom 莫兰迪主题：十款变体（雾蓝 mist、朱砂 cinnabar、花瓣 petal、涟漪 ripple、鼠尾草 sage、暖石 stone、青金 lapis、琥珀 amber、极光 aurora、薰衣草 lavender）基于 OKLCH 调色，明暗切换不跳变，顶栏一键切换，20 组「主色 + 底色」实测全部达到 WCAG AA。
+- [webkubor/dsh-bloom-theme](https://github.com/webkubor/dsh-bloom-theme) — Bloom 莫兰迪主题：十款变体（黛蓝 mist、朱砂 cinnabar、桃夭 petal、天青 ripple、竹青 sage、赭石 stone、青金 lapis、琥珀 amber、落霞 aurora、青莲 lavender）基于 OKLCH 调色，明暗切换不跳变，顶栏一键切换，每套配色右侧标出处诗句，20 组「主色 + 底色」实测全部达到 WCAG AA。
 - [Wedomizing/Dsh_genshin_nicole_skin](https://github.com/Wedomizing/Dsh_genshin_nicole_skin) — 原神·尼可 PV 背景皮肤：14 张去字幕画面定时轮播淡入淡出，支持暂停与上一张/下一张切换。
 - [Willmylife/dsh-dynamic-wallpaper](https://github.com/Willmylife/dsh-dynamic-wallpaper) — 动态壁纸插件：8 种内置 Canvas 壁纸（粒子、流星雨、星际穿梭、波光、雨幕、气泡、字符雨、极光）加自定义视频背景，支持速度/密度/遮罩/模糊调节，配置持久化。
 - [wsxwj123/dsh-plugins#dsh-appearance-gallery](https://github.com/wsxwj123/dsh-plugins/tree/main/packages/dsh-appearance-gallery) — 15 个精选主题家族 + 9 个完整 dsh-web-ui 皮肤复刻合并为单一插件、设置页单一入口，支持 CSS-only 自定义主题 JSON、受控自定义皮肤包导入（可直接选文件夹）、试穿、应用、删除与恢复默认。npm 包名 `dsh-appearance-gallery`。
@@ -1313,6 +1313,7 @@ dsh plugin --profile web add dshmarket
 - [V1ki/dsh-plugin-subscriptions](https://github.com/V1ki/dsh-plugin-subscriptions) — 把 ChatGPT（Codex）、Claude、Grok 订阅当作 DeepSeek Harness 的 LLM 提供方：设置页登录、模型目录、用量展示，以及 image_generate、video_generate 与 x_search 工具。
 - [vitas/dsh-model-pricing](https://github.com/vitas/dsh-model-pricing) — DSH 设置页中的模型价格表：约 7,250 个模型 / 213 个提供商（叠加本地路由目录），诚实的最低标价比较、按实际路由计价的会话成本、缓存泄漏归因，以及经验证的促销信息源。
 - [volcengine/ark-cli#ark-plan-api](https://github.com/volcengine/ark-cli/tree/main/dsh-plugins/ark-plan-api) — 在 DSH 原生模型选择器中注册方舟 Agent Plan、Coding Plan 与后付费模型路由。
+- [webkubor/dsh-llm-hub](https://github.com/webkubor/dsh-llm-hub) — 补上官方 pi-ai 适配器在模型页缺的那半：网关可达性与延迟探测、一键拉取网关模型目录并勾选写回配置、DeepSeek 余额与各家配额就地常驻、每个 provider 实际接入的协议与地址；模型下拉只列当前真能用的分组 —— key 失效、余额耗尽、配额用尽都会被摘掉，修好后自动恢复。
 - [welsione/dsh-model-router](https://github.com/welsione/dsh-model-router) — 统一模型路由：一个逻辑 ModelID 汇聚多家供应商，首 token 前失败自动切换并冷却、健康度择优、按 purpose 三档分级（tier1/2/3）、每候选思考级别，设置面板自动保存即时生效。
 - [wenheguo2/dsh-delegation-suite](https://github.com/wenheguo2/dsh-delegation-suite) — 智能委派套件：按角色路由最强模型、失败自动互备、每个子代理可设思考强度、名字带模型标签、支持 fork 委派与可视化路由编辑。
 - [wenzetan/dsh-llm-newapi](https://github.com/wenzetan/dsh-llm-newapi) — NewAPI（OpenAI 兼容网关）模型接入：注册 `newapi` 路由，仅发现聊天类模型，自动从 models.dev 获取模型参数（上下文窗口、思考强度等）并填充，并在 Web 设置页配置 base URL 与 API Key。
@@ -2210,6 +2211,7 @@ dsh plugin --profile web add dshmarket
 - [sensedeal/cue-skills#cue-data-mcp](https://github.com/sensedeal/cue-skills/tree/main/dsh/cue-data-mcp) — 向 DeepSeek Harness 暴露 Cue 公开数据 MCP 服务：15 个 streamable-http 域（约 104 工具），覆盖制裁/宏观/披露/法规/持仓/主体/学术/IPO/ESOP/回购/脚注/事实索引，以原生 mcp__cue_<domain>__* 工具提供。
 - [sensedeal/cue-skills#cue-omni-reader](https://github.com/sensedeal/cue-skills/tree/main/dsh/cue-omni-reader) — 面向 DeepSeek Harness 的 Cue Omni Reader：接入审校版 omni-reader-mcp MCP 服务，把 URL/文件解析工具以 mcp__omni__ 暴露（parse、get_parse_status、read_result、read_outline、save_result、discard_result、cancel_parse）。
 - [seven282/oss-prompt-optimizer](https://github.com/seven282/oss-prompt-optimizer) — 把原始指令一键优化为专业提示词——支持三种输出形态、情境感知画像、自迭代学习，以及 /template 等命令与一键工具/钩子/自动语言。
+- [shengyvself/dsh-prompt-only-forge](https://github.com/shengyvself/dsh-prompt-only-forge) — 点会话输入框右座 ✨，把「打磨提示词」模板写进输入栏——当前草稿自动嵌进 `<内容>` 位置，不发送、不联网、不调模型，由当前会话的主 agent 带着全部上下文改写。替代 narrative-prompt-polish（2026-09-14 更名并整体重构）。
 - [ShiXiangYu2/dsh-translate-pro](https://github.com/ShiXiangYu2/dsh-translate-pro) — 专业翻译：18 种目标语言、4 种风格（正式/口语/技术/直译）、术语表控制译名、整文件翻译（README/文档/字幕）并保留 Markdown 与代码块格式；经 SiliconFlow 调用 DeepSeek。
 - [shlouai/dsh-debate](https://github.com/shlouai/dsh-debate) — 通过一场正式辩论来回答难题：两个对抗性子代理各自调研并论证对立立场，最后由主代理依据辩论记录作出裁决，提供 debate_open、debate_round、debate_verdict 三个工具。
 - [SIMON-WORLD/dsh-eco-indicator](https://github.com/SIMON-WORLD/dsh-eco-indicator) — 世界银行开放数据经济指标查询：GDP、通胀、贸易、人口等，无需 API 密钥。
@@ -3783,6 +3785,7 @@ dsh plugin --profile web add dshmarket
 - [J0ss077/dsh-always-require-tools-approval](https://github.com/J0ss077/dsh-always-require-tools-approval) — 在配置的工具（默认 bash、pwsh）执行前要求一次性用户审批：受控工具暂停并询问，其余委托执行，缺少审批渠道时默认拒绝。
 - [Jiao-XXX/dsh-auto-approve](https://github.com/Jiao-XXX/dsh-auto-approve) — 在 workspace-write 与 danger-full-access 之间增加 `auto` 权限档：分类器一次性放行例行沙箱升级，危险或不确定的操作仍转人工审批。
 - [jilian-dsh/dsh-rule-engine](https://github.com/jilian-dsh/dsh-rule-engine) — dsh 规则执行引擎：解析 AGENTS.md、硬拦违反规则的工具调用、文本纠察与审计、/guard 命令、版本化文件守卫、自由区域支持（引擎跳过自由区内容）。
+- [JimchengChina/dsh-action-outbox](https://github.com/JimchengChina/dsh-action-outbox) — 暂存精确的 DSH 工具调用而不执行，在持久化批量审查收件箱中展示完整规范参数；编辑或重启后审批失效，仅允许携带匹配 SHA-256 摘要与一次性 nonce 的批次通过 DSH 正常工具管线提交。
 - [jkt-check/dsh-secret-scrub](https://github.com/jkt-check/dsh-secret-scrub) — 不可逆密钥脱敏守护：在访问密钥、Bearer 令牌、私钥块进入会话日志和模型请求之前，将其改写为 `[REDACTED:<category>]` 占位符。
 - [JohnXu22786/safety-net](https://github.com/JohnXu22786/safety-net) — dsh 破坏性命令拦截闸门：解析 shell 语义、依据 41 条内置规则判定风险，将 rm -rf、git reset --hard、git push --force 等不可逆命令挡在确认关卡之前。
 - [JohnXu22786/secret-guard](https://github.com/JohnXu22786/secret-guard) — 拦截 agent 对敏感文件（.env、凭据、密钥材料）的读写，对工具结果中泄露的机密形状内容做掩码兜底，记录审计日志，并提供永不输出原始值的 sg_* 安全检查工具。
