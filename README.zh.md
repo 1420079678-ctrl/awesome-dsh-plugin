@@ -361,6 +361,8 @@ dsh plugin --profile web add dshmarket
 - [jjxjjjjiik-bot/dsh-chat-timeline](https://github.com/jjxjjjjiik-bot/dsh-chat-timeline) — 1:1 复刻 DeepSeek 官网右侧对话导航栏（ScrollNav）：悬停展开面板、阅读位置高亮、点击跳转。
 - [jkamkk/dsh-liquid-glass-input](https://github.com/jkamkk/dsh-liquid-glass-input) — 给 DSH Web GUI 输入卡加上液态玻璃折射效果与弹簧按压动画。已发布 npm：dsh plugin --profile web add dsh-liquid-glass-input。
 - [JNNarrator/dsh-deckseek](https://github.com/JNNarrator/dsh-deckseek) — 阅读视图增强插件——执行过程自动收起、右缘消息导航导轨、页内查找、统一失败卡片，支持生成式 MCP Apps（SEP-1865）沙箱交互。
+- [john-walks-slow/dsh-qol](https://github.com/john-walks-slow/dsh-qol) — 面向 dsh Web GUI 的移动优先体验优化包：Chrome 式活跃会话标签页（Tab Bar）、全屏侧栏滑动开合、侧栏浮层与折叠态最近会话、切换会话不拉起输入法、viewport/键盘安全区适配、按钮触摸反馈、代码块表格内滚、隐藏权限下拉、设置页全屏重写与页签记忆、合成器线程状态动画、长按拖拽卡死修复——14 项功能均可在设置页 QoL 分区独立开关、即时生效，并按浏览器持久保存在 localStorage；纯客户端 CSS/JS，移动规则锁定 ≤768px 视口，桌面端零影响。
+- [john-walks-slow/dsh-zen](https://github.com/john-walks-slow/dsh-zen) — 禅模式视图 + 前台盯屏时间统计插件：智能体后台运行时提供极简 Zen 标签页（进行中/结束状态文案、用户消息、动态提示、Markdown 渲染最终回复、单行轮次统计），统计前台盯屏时长并给出每日/每周禅值，支持一键隐藏中间过程（工具调用/推理行）、任务开始完成时自动进出禅、Alt+Z 快捷键与 Zen 设置面板——纯前端实现，数据存 localStorage，无网络请求。
 - [johnnycls/dsh-no-setup-mode](https://github.com/johnnycls/dsh-no-setup-mode) — DSH 网页免设置模式：隐藏复杂界面、自动套用最佳设置（聊天模式、Full Access、账户余额），并提供一键人设角色扮演（女僕/管家）。
 - [Js2Hou/dsh-mcp-manager](https://github.com/Js2Hou/dsh-mcp-manager) — DSH 网页 MCP 可视化管理插件：在「设置 → MCP」中查看/新增/删除/启停 MCP 服务器，实时显示连接状态与工具数。
 - [jsdvjx/dsh-strata](https://github.com/jsdvjx/dsh-strata) — 滚动条槽位里的会话缩略图：按事件类型着色的等比色块、用户与失败锚点、滚到顶自动补载历史、悬停线索墙铺开全部发言，附近/中/全三档地图尺度切换。
@@ -1218,6 +1220,7 @@ dsh plugin --profile web add dshmarket
 - [Jesse-njx/dsh-polyglot](https://github.com/Jesse-njx/dsh-polyglot) — DSH 的模型切换器：指向任意 OpenAI 兼容端点，内置精选免费/低价 DeepSeek 服务商预设，免费额度限流时自动回退。
 - [jiay98528-dev/dsh-model-sync](https://github.com/jiay98528-dev/dsh-model-sync) — 把各提供方线上模型列表写进 DSH 设置，输入框圆环显示当前会话模型的 5 小时/7 天窗口或按量剩余余额。
 - [jiay98528-dev/dsh-plugin-weaknet-adaptor](https://github.com/jiay98528-dev/dsh-plugin-weaknet-adaptor) — 弱网适配器：模型流式请求的长退避透明重试（上限 10 分钟）、本地响应重放缓存、心跳自动重连、降级模式 token 节流，并提供中英双语设置页。
+- [john-walks-slow/dsh-set-model](https://github.com/john-walks-slow/dsh-set-model) — 为 DSH 提供动态模型切换与思考深度调节：set_model / list_models 两个 Agent 工具让模型按任务难度自主切换 provider、model 与 reasoningEffort（思考深度），强制附带切换理由，带 Provider 白名单与上下文窗口 Token 水位护栏，活跃模型注入运行时上下文；进入 Plan 规划模式自动切换到配置的规划模型，退出自动恢复日常执行模型。
 - [Jonah-Wu23/dsh-agy-safe](https://github.com/Jonah-Wu23/dsh-agy-safe) — 合规地在 dsh 中使用你自己的 Antigravity 额度：将本机已登录的官方 Antigravity CLI（agy）会话桥接为主对话与子代理模型提供方。
 - [JUNQINGV587/dsh-maestro](https://github.com/JUNQINGV587/dsh-maestro) — 规划者/执行者委派调度：高阶模型（Planner）定方向，一次性低阶执行子代理（按角色的路由与提示词）干具体活；默认角色 + 单次委派覆盖，输入框芯片快速切换角色与全局思考等级，设置页管理执行角色。
 - [jyao-SUSE-power-group/dsh-provider-rate-limit](https://github.com/jyao-SUSE-power-group/dsh-provider-rate-limit) — 按供应商与模型粒度限速 LLM 请求，预约式令牌桶支持排队或拒绝两种模式，附带网关身份规则（改写 User-Agent、注入自定义请求头）。
@@ -1695,6 +1698,7 @@ dsh plugin --profile web add dshmarket
 - [jinguanghai/deepseek-harness-forge-plugins#forge-memory](https://github.com/jinguanghai/deepseek-harness-forge-plugins/tree/main/plugins/forge-memory) — 基于 BM25 关键词检索的记忆召回。
 - [JingxuanC/causal-memory#dsh-plugin](https://github.com/JingxuanC/causal-memory/tree/main/dsh-plugin) — 因果记忆插件：零依赖的 MCP stdio 桥，把 causal-memory 服务的 17 个工具以干净名（无 mcp__ 前缀）挂载——本地 SQLite 记录「决策 → 结果」因果边（caused / enabled / prevented），压缩后记忆仍存活——另注入一段常驻系统提示词。需先将 causal-memory 服务端装到 PATH（pip install causal-memory，或下载预编译包）。
 - [jisi71/dsh-memories](https://github.com/jisi71/dsh-memories) — 双账本跨会话记忆：自动把对话中的长期事实提取进 MEMORY.md，并维护项目进度账本 PROGRESS.md，每个新会话自动召回两本账。
+- [john-walks-slow/dsh-clear-mind](https://github.com/john-walks-slow/dsh-clear-mind) — 让模型自主压缩自身上下文的 dsh 插件：mind_map 工具俯瞰模型自己的上下文表面（稳定 seq、角色、token 重量、清理边界标记，返回内附清理手册），clear_mind 工具把选定的对话历史区间替换成模型自写的检查点（走平台原生 compaction 事务，GUI 渲染可展开的压缩行），调用对自动折叠成单行墓碑，上下文过长或单轮步数过多时主动提醒模型清理；人类侧会话记录保持原样、可审计可回退。
 - [JohnXu22786/context-pruner](https://github.com/JohnXu22786/context-pruner) — 面向 DeepSeek Harness 长会话的上下文分诊插件：通过官方 ctx.compaction 接缝，用确定性规则筛查并裁剪过期、重复、失败与超大的上下文内容。
 - [JohnXu22786/memory-standard](https://github.com/JohnXu22786/memory-standard) — DeepSeek Harness 记忆标准协议（mm）：分层 MEMORY.md 与硬性预算、冻结快照、mm:// URI 互认、会话日志摄取，附带 mem_* 工具与独立 CLI。
 - [JunNanLYS/dsh-layered-memory](https://github.com/JunNanLYS/dsh-layered-memory) — dsh 长期记忆：对话自动蒸馏为原子事实、场景摘要与用户画像，每步模型调用前自动注入相关记忆。开箱零配置——BM25 + 向量混合检索，可选本地离线嵌入，chat/work 双族隔离。
@@ -3302,6 +3306,7 @@ dsh plugin --profile web add dshmarket
 - [Jesse-njx/dsh-chatnode-wechat](https://github.com/Jesse-njx/dsh-chatnode-wechat) — 通过 iLink 网关在微信里与 DSH agent 聊天、监控与审批：双向文本、会话切换、进度摘要与编号审批提示。
 - [jiezeng2004-design/dsh-chatgpt-bridge](https://github.com/jiezeng2004-design/dsh-chatgpt-bridge) — 通过 MCP 让 ChatGPT Web 创建、查看、继续和监督 DeepSeek Harness Agent 会话与 Goal，同时保留 DSH 原生的审批、沙箱与工作区安全模型。
 - [JMOKSZ/dsh-lark-bridge](https://github.com/JMOKSZ/dsh-lark-bridge) — 飞书入口插件：一条命令安装，流式进度卡片带工具面板、提问/审批按钮卡片、附件处理与 feishu_send 主动推送。
+- [john-walks-slow/dsh-hybrid-notify](https://github.com/john-walks-slow/dsh-hybrid-notify) — DeepSeek Harness 多通道通知插件：前台弹页面内 toast，后台按可用性切换 PWA 系统通知（Service Worker）或浏览器通知兜底；任务完成、审批请求、提问、计划评审、出错等事件可逐项开关，重要通知驻留不消失，并用 Web Audio 实时合成提示音效、零音频文件零网络上报。
 - [kaixinbaba/dsh-complete-notify](https://github.com/kaixinbaba/dsh-complete-notify) — 任务完成时播放提示音并弹出小通知：Web Audio 合成音效、页面内 toast、页面在后台时系统通知，纯浏览器方案、零系统依赖、跨平台。
 - [knownothing114/dsh-notify](https://github.com/knownothing114/dsh-notify) — 当 dsh 需要你注意时发出桌面通知——权限确认、提问、计划审批、回合完成、目标、出错、工作流——并提供设置页「通知」选项卡，改动即时生效。
 - [kongdexu/dsh-win-notify](https://github.com/kongdexu/dsh-win-notify) — 真正的 Windows 系统 Toast（通知中心持久、DeepSeek 品牌鲸鱼图标）：任务完成 / 需要输入 / 需要审批时提醒。仅支持 Windows，零运行时依赖。
