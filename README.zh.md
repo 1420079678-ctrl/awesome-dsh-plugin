@@ -786,6 +786,7 @@ dsh plugin --profile web add dshmarket
 - [zoumutou/dsh-web-preview](https://github.com/zoumutou/dsh-web-preview) — 侧边网页预览面板：本地静态托管、Markdown/代码/图片预览、非静态项目一键运行（Cargo/npm/Go/Python）实时日志、文件直接拖入对话（保存到工作区）、网页元素标记批注、404 时工作区文件搜索、链接点击接管到侧边预览。
 - [ZSeven-W/dsh-openpencil](https://github.com/ZSeven-W/dsh-openpencil) — OpenPencil 设计预览与编辑插件。
 - [zuoguyoupan2023/adhdgofly-dsh-ext](https://github.com/zuoguyoupan2023/adhdgofly-dsh-ext) — 在 DSH Web 已渲染的 Markdown 中做词性高亮：名词绿、动词红、形容/副词紫，支持深/浅色板、词性开关与流式防抖。
+- [ZZJQ678/dsh-model-picker](https://github.com/ZZJQ678/dsh-model-picker) — 把聊天输入框的模型选择器换成按渠道商分组、可折叠的列表：按渠道商归组，把视觉桥镜像渠道商折叠回上游，并逐模型带上设置里声明的思考强度选项。仅在 DSH 桌面版实测，Web 版未测试。
 - [zzx-dear/dsh-selection-followup](https://github.com/zzx-dear/dsh-selection-followup) — 选中聊天回复中的任意文字，浮出「追问/复制」气泡：一键把选中内容作为引用填入输入框（问题由你输入），或一键复制。另附安装与实现文档。
 
 ### 💰 用量与计费
@@ -2833,6 +2834,7 @@ dsh plugin --profile web add dshmarket
 - [Olina1Ye/internal-skill-workshop-plugin](https://github.com/Olina1Ye/internal-skill-workshop-plugin) — 在 DSH Web 中浏览、登录并安全安装来自团队 Skill Base 的公开或私有 Skill。
 - [OMSociety/kimi-ppt-skill](https://github.com/OMSociety/kimi-ppt-skill) — 内含 kimi-ppt 技能的 DSH 插件：本地生成 .pptx 完成 PPT 的创建、编辑与导出，Pillow 生成预览图；衍生自 MIT 项目 open-kimi-ppt-skill。
 - [PerryLink/dsh-plugin-guide](https://github.com/PerryLink/dsh-plugin-guide) — DSH 插件开发知识库，作为按需加载的 agent 技能随 bundle 安装：官方约束、任务工作流、API 参考与社区踩坑，写插件时让 DSH 自己查。
+- [PerryLink/dsh-plugin-upgrade](https://github.com/PerryLink/dsh-plugin-upgrade) — 面向 DeepSeek Harness 插件作者的升级技能：一个包只放一份走廊索引，自动识别调用方的 peer 区间并路由到对应已封版的升级卡片（0.1.3-alpha.1 至 0.1.5-rc.1 为 A+B 两条腿，0.1.5-rc.2 至 0.1.6-alpha.2 为 C 腿），并附带以 bundle 技能与 npx CLI 两种形态提供的零依赖接缝扫描器。
 - [PerryLink/dsh-plugin-upgrade-015](https://github.com/PerryLink/dsh-plugin-upgrade-015) — 合并后的版本锁定插件升级技能（0.1.3-alpha.1 → 0.1.5-rc.1，两条闭环腿）：证据绑定版本卡 + 零依赖 20 接缝扫描器，以 bundle 技能 + npx CLI 两种形态发布。
 - [pn1024/dsh-ppt-master](https://github.com/pn1024/dsh-ppt-master) — AI 驱动的演示文稿工作流：从 PDF、DOCX、网址或 Markdown 生成可编辑 PPTX 与 SVG 快照，支持原生 PPTX 模板填充与成品演示文稿增强。
 - [qkycir-123/dsh-run2skill](https://github.com/qkycir-123/dsh-run2skill) — 将 DSH 会话中明确表达的经验整理为可审核的原生 Skill 草稿，并仅在用户确认后保存。
