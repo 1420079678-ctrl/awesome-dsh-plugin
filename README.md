@@ -2651,6 +2651,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [WYR-233/dsh-multi-tts](https://github.com/WYR-233/dsh-multi-tts) - Per-reply read-aloud with a multi-provider settings page — MiniMax or any OpenAI-compatible /audio/speech endpoint, with voice, emotion, speed and model selection plus an auto-read toggle.
 - [XanthanL/dsh-plugin-uisfx](https://github.com/XanthanL/dsh-plugin-uisfx) - Semantic UI sound effects powered by uisfx: task start/success/failure and per-button cues, settings UI with instant preview, 12 sound packs, Host-persisted preferences, and `ctx.uisfx` service for other plugins.
 - [yu-wenchao/dsh-tool-lipsync](https://github.com/yu-wenchao/dsh-tool-lipsync) - Free lip-sync video generation plugin for DSH with 3000+ voices and 500+ languages.
+- [YuMS/dsh-duet](https://github.com/YuMS/dsh-duet) - Full-duplex Chinese voice interaction for DSH Web: dictate and edit tasks, submit requests, manage sessions, answer DSH questions, and hear concise task-completion announcements.
 - [dsh-watch-video](https://github.com/zeshuochen/dsh-watch-video) - Subtitle-first video transcription with SRT export, cancellable job controls, and a faster-whisper large-v3 fallback when subtitles are unavailable.
 - [Zhangbo-cn/dsh-voice-input-plugin](https://github.com/Zhangbo-cn/dsh-voice-input-plugin) - Composer mic for the Web UI: tap-to-monitor live transcription and hold-to-talk, with host Edge TTS reply reading that streams while the model generates, echo-pause during reading, and tap-to-stop.
 

@@ -2651,6 +2651,7 @@ dsh plugin --profile web add dshmarket
 - [WYR-233/dsh-multi-tts](https://github.com/WYR-233/dsh-multi-tts) — 每条回复旁的朗读按钮与输入框自动朗读开关，设置页可选服务商与音色：MiniMax 或任意 OpenAI 兼容的 /audio/speech 端点，可调音色、情绪、语速与模型。
 - [XanthanL/dsh-plugin-uisfx](https://github.com/XanthanL/dsh-plugin-uisfx) — 基于 uisfx 的语义化 UI 音效：任务开始/成功/失败、不同按钮情景 cue，设置页即时试听，12 种音色包，Host 持久化，并提供 `ctx.uisfx` 服务给其他插件。
 - [yu-wenchao/dsh-tool-lipsync](https://github.com/yu-wenchao/dsh-tool-lipsync) — DSH 免费对口型口语视频生成插件，支持 3000+ 声音和 500+ 语言。
+- [YuMS/dsh-duet](https://github.com/YuMS/dsh-duet) — 基于全双工语音模型的 DSH 网页端中文语音交互：边听边说、随时插话，用语音输入和修改任务、提交请求、管理会话、回答 DSH 的问题，并简短播报任务完成结果。
 - [dsh-watch-video](https://github.com/zeshuochen/dsh-watch-video) — 字幕优先的视频转录，支持 SRT 导出与可取消任务控制；字幕不可用时回退到 faster-whisper `large-v3`。
 - [Zhangbo-cn/dsh-voice-input-plugin](https://github.com/Zhangbo-cn/dsh-voice-input-plugin) — 输入框麦克风：点击持续监控、按住对话；浏览器语音识别逐字上屏，回复由 host Edge TTS 边生成边朗读，朗读时暂停识别防回声，点击可停止。
 
