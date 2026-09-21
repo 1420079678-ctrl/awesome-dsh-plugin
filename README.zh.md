@@ -80,6 +80,8 @@ dsh plugin --profile web add dshmarket
 - [dsh-answer-reviewer](https://github.com/bycall/dsh-answer-reviewer) — 智能体回答审查器：每一轮 agent 的最终输出由独立 LLM 重新打分（1-100），低于阈值时携带具体反馈引导 agent 自我修正；评分以角标形式展示在该回答的操作行上（通过=绿、未达标=红，悬停可见重试次数与原因）。闸值配置经 127.0.0.1 本地 HTTP 服务实时修改，并支持输入框上方的折叠面板与 dsh-better-sidebar 侧栏配置页。
 - [CAI-MH/dsh-quality-review](https://github.com/CAI-MH/dsh-quality-review) — 每轮回复结束时用独立审查模型审核输出，判定不合格则引导 agent 修复，每轮最多追问 2 次；可注入 SOP 文件夹标准作为额外审核维度。
 - [FuRongJun-1999/dsh-memory](https://github.com/FuRongJun-1999/dsh-memory) — 白箱AGI架构探索：元认知（自我认知循环）、持续学习（知识飞轮）、世界模型（条件空间+语义时空图）、自我改进（自举纪律）、零LLM白箱管线与可审计信任护栏。
+- [dsh-proactive](https://github.com/john-walks-slow/dsh-proactive/tree/main/packages/dsh-proactive) — 为 DeepSeek Harness 提供 host 级主动唤醒：模型用 proactive_set 给自己设定闹钟（单次 / 循环间隔 / cron，支持 jitter 随机抖动），到点自动唤醒冷会话执行心跳、定时提醒与任务跟进；安静时段与每日投递预算约束模型自主跟进，静默唤醒以 proactive_silence 收尾并把唤醒上下文折叠为墓碑，不污染长上下文；自带 Web 管理面板（设置页节 + 会话页签，SSE 实时刷新）管理闹钟与唤醒历史。
+- [john-walks-slow/dsh-simulated-life](https://github.com/john-walks-slow/dsh-simulated-life) — 为 DeepSeek Harness 的 Agent 提供拟真生活上下文：每轮对话自动注入工作区 .life/ 目录近 24 小时的生活事件（滑动窗口过滤、会话内智能去重与增量更新、世界近况），并提供 life_react 工具让 Agent 把感受、思考与行动回填到自己的生活日志，反哺下一轮世界演化；配合每日世界演算工作流可获得持续的模拟人生式生活轨迹。
 - [Jonah-Wu23/dsh-gungnir#dsh-plugin](https://github.com/Jonah-Wu23/dsh-gungnir/tree/main/packages/dsh-plugin) — 面向 DeepSeek Harness 的证据驱动目标校验插件。通过 /ultragoal 锁定目标，并依据命令退出码与生成产物验证完成状态，防止模型虚报任务完成。
 - [Kanadego/dsh-heartbeat](https://github.com/Kanadego/dsh-heartbeat) — 心跳循环：默认每 20 分钟自己醒一次——维护一份关于你兴趣与偏好的本地画像，按你设的兴趣范围上网搜新东西并存下来。攒到值得分享的内容，就向你绑定的会话送一份简短的素材包。能不能开口由代码里的规则决定（静默时段、忙时窗口、每日上限、冷却），说不说由那个会话里的 agent 自己判断。仅支持 Windows。
 - [kenz1117/dsh-engram](https://github.com/kenz1117/dsh-engram) — 跨会话长期记忆插件，以「记忆宫殿」隐喻重构 agent 长期记忆：双层 SQLite 分库（用户级 + 按 git origin 隔离的项目级）、FTS5 + 本地向量 RRF 融合与新鲜度/命中排序 boost、从会话日志自动摄取（含末轮）、来源审计链、巩固蒸馏与衰减遗忘，以及设置页「记忆库」面板（走廊拓扑、导览管家、翻新清单）。
@@ -769,7 +771,7 @@ dsh plugin --profile web add dshmarket
 - [zenvertao/dsh-inline-comments](https://github.com/zenvertao/dsh-inline-comments) — 选中即批注，刷新亦留存；随消息发送，模型逐条回应。
 - [zerorigin-studio/dsh-deepseek-chat](https://github.com/zerorigin-studio/dsh-deepseek-chat) — 网页对话入口插件：侧边栏一键打开 chat.deepseek.com 独立窗口（dsh-desktop 桥接），纯网页环境自动回退内嵌打开。
 - [zerorigin-studio/dsh-desktop-shell](https://github.com/zerorigin-studio/dsh-desktop-shell) — 把 dsh web 界面封装成原生 Windows 桌面窗口，内置桌面客户端，带系统托盘、开机自启与协议文件分发。
-- [zhang24xiao/dsh-snippets](https://github.com/zhang24xiao/dsh-snippets) — 管理 DSH Web 界面的 CSS 与 JS 代码片段：启用的 CSS 注入为 style 元素，启用的 JS 在页面内执行；提供侧栏底部快捷开关，设置里在「插件」下自带一张卡片，并可选本地文件夹监听与 Gist 同步。
+- [zhang24xiao/dsh-snippets](https://github.com/zhang24xiao/dsh-snippets) — 管理 DSH Web 界面的 CSS 与 JS 代码片段：启用的 CSS 注入为 style 元素，启用的 JS 在页面内执行；提供侧栏底部快捷开关，并在设置导航里有自己的页面，并可选本地文件夹监听与 Gist 同步。
 - [zhangliang0115/ai-plugin#dsh-plugin](https://github.com/zhangliang0115/ai-plugin/tree/main/dsh-plugin) — aipx 工具包：技能之外还有 Hub Console 控制台——用约 4 个元工具代理全部 MCP 服务器，含服务器池健康、工具级启停、工具目录，以及直观展示 mcp_search 返回结果的搜索试验场。
 - [zhangTELL/dsh-diagram](https://github.com/zhangTELL/dsh-diagram) — 将聊天中的 mermaid 代码块原位渲染为图表（流程图/时序图/类图/状态图/ER图/甘特图/饼图），支持放大、源码切换、复制 PNG 与下载 SVG。
 - [dsh-settings-nav-organizer](https://github.com/zhengjy01/dsh-settings-nav-organizer) — 设置面板导航整理：第三方插件入口折叠为可展开的分组行，支持书签式自定义分组、折叠开关与自动分类（市场标签 → 名称规则 → AI 模型三级兜底）。
@@ -1485,6 +1487,7 @@ dsh plugin --profile web add dshmarket
 - [jasonrale/dsh-archive-manager](https://github.com/jasonrale/dsh-archive-manager) — DSH Web UI 的归档会话管理器：重新打开已归档会话并继续对话、取消归档恢复原位、彻底删除会话，支持分组浏览、消息搜索与原生视图同步。
 - [jermaine123123/agent-context-editor#deepseek-harness](https://github.com/jermaine123123/agent-context-editor/tree/main/adapters/deepseek-harness) — Agent Context Editor 是一个可以手动排除、编辑和选择性压缩 AI 对话上下文的跨 Agent 插件，同时支持搜索、筛选、选择、隐藏、恢复和撤销对话内容，并保留原始 Session。
 - [Jesse-njx/dsh-crosstalk](https://github.com/Jesse-njx/dsh-crosstalk) — 跨会话消息：本机任意会话都可像 Claude Code 一样列出并互发消息，基于本地心跳注册表与收件箱。
+- [john-walks-slow/dsh-message-datetime](https://github.com/john-walks-slow/dsh-message-datetime) — 每轮对话开始向模型上下文注入单行时间戳读数（星期 / 日期 / 时间 / UTC 偏移 / IANA 时区），收尾再注入 Turn ended 关闭读数——模型始终知道现在几点、今天星期几、上一轮何时结束，日期运算与跨轮间隔不再靠猜；轻量时钟感知，每条约 30 token。
 - [JohnXu22786/session-titler](https://github.com/JohnXu22786/session-titler) — 两阶段会话题词：会话进行中即时关键词题名，空闲后再调用最经济的预算模型精修，并附带一句话摘要。
 - [jueburenshu123/dsh-win-minimal](https://github.com/jueburenshu123/dsh-win-minimal) — Windows 极简模式 preset：单句 persona、三工具、无运行时上下文。
 - [jujiujiang222-cell/dsh-archive-sessions](https://github.com/jujiujiang222-cell/dsh-archive-sessions) — 归档会话管理：在设置页新增“归档会话”，列出所有已归档会话，支持恢复与二次确认后的永久删除。
