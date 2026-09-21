@@ -1572,6 +1572,7 @@ dsh plugin --profile web add dshmarket
 - [Seetraum/harness-session-delete](https://github.com/Seetraum/harness-session-delete) — DSH 会话回收站：侧边栏删除图标、多选还原与彻底删除、活跃会话保护。
 - [Semidia/dsh-session-manager](https://github.com/Semidia/dsh-session-manager) — 会话行右键菜单与侧边栏会话管理：置顶、重命名、归档、分叉、导出、复制工作目录/会话 ID/深链，在资源管理器或新窗口打开。
 - [shendeguize/AgentSideCar#plugin](https://github.com/shendeguize/AgentSideCar/tree/main/plugin) — 跨 agent 看板监控本机 AI agent 会话（cursor-ide、claude、codex、copilot、kimi 及 dsh 自身），提供会话时间线，并可经默认关闭的两阶段确认门注入消息。
+- [shenhuanageshei/dsh-team-link](https://github.com/shenhuanageshei/dsh-team-link) — 会话深链、全量会话导出（markdown/JSON）、带配对的跨会话消息投递，以及团队 roster / 换届 / 恢复工具。
 - [shuanzhe/dsh-turn-hard-delete](https://github.com/shuanzhe/dsh-turn-hard-delete) — 删除 DeepSeek Harness 会话中的一整轮对话（提问 + 回答 + 工具调用），不影响会话本身。
 - [SiriLee/dsh-rewind](https://github.com/SiriLee/dsh-rewind) — 同一会话窗口内的 in-place 对话回退（不 fork，Claude Code /rewind 语义）：每条消息的 ↶ 按钮把模型上下文回退到任意用户消息，可选用磁盘持久化的 before-backups 还原工作区文件。
 - [SLin-code/dsh-task-notice-board](https://github.com/SLin-code/dsh-task-notice-board) — 面向 DSH Web 的任务级 Workspace 到 Task 到 Session 协作控制台，提供 Session 看板、归档对话查看，以及在关联 Session 之间共享的有界长期记忆。
