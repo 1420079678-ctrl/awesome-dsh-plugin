@@ -3786,6 +3786,7 @@ dsh plugin --profile web add dshmarket
 - [DingZhiQi5596/dsh-plugin-guard](https://github.com/DingZhiQi5596/dsh-plugin-guard) — DSH Desktop 插件安全防护：崩溃后自我修复 + 8 项核心安全检查（另有 2 项可选：深度组合校验、业务冒烟），写完插件自动提示。非商业源可用。
 - [DNAlec/dsh-auto-approve](https://github.com/DNAlec/dsh-auto-approve) — 自动审批 / 自动审核需要审批的工具调用：先用关键词分桶做零上下文红线匹配，再交由审核模型判类别与风险等级， 按命中行与等级那一格决定自动允许、自动拒绝或转人工；判定没跑成固定转人工，自动拒绝会把原因回传给模型。
 - [drscrewdriver/dsh-perm-gate](https://github.com/drscrewdriver/dsh-perm-gate) — P0–P4 确定性优先权限门控，含 Permissive 档位、学习沉淀与审批历史 UI；凭据/受保护路径硬拒绝，内部只读工具自动放行。
+- [DWJZ/dsh-allow](https://github.com/DWJZ/dsh-allow) — 按路径与能力（read / write / create / delete / execute）授予 shell 调用的文件权限，而不是按命令名判断。命令行的文件效果由解析得出，缺哪个能力就出审批卡片而不是一律拒绝，同一套规则还会编译成进程、它的子进程、以及命令行根本没露出来的代码共同运行其下的 macOS Seatbelt profile。会话里的「审批」标签页把审计日志读回来，显示每次判定是规则、自动复核还是人拍的板。
 - [Eligahyu/dsh-sentinel-scanner](https://github.com/Eligahyu/dsh-sentinel-scanner) — DSH 插件安全扫描器：只读静态审计（执行、凭据、外传、混淆、安装脚本、bundle 清单），输出 0-100 风险分。
 - [fb0sh/dsh-pentester](https://github.com/fb0sh/dsh-pentester) — 基于 PTES 的渗透测试插件，采用 Root-Orchestrator 架构，用于 DeepSeek Harness。
 - [GDWhisper/dsh-web-startup-auth](https://github.com/GDWhisper/dsh-web-startup-auth) — 替换 dsh web 启动器以允许绑定 0.0.0.0，并以账号密码登录为门槛：签名会话 cookie、/api 路由保护、设置面板认证标签页，以及轮换签名密钥使全部会话失效的重置 CLI。
@@ -4217,6 +4218,7 @@ dsh plugin --profile web add dshmarket
 - [xczhanjun/lazeword](https://github.com/xczhanjun/lazeword) — 舒服的离线背单词全家桶：1094 个精选单词、间隔重复、6 种题型、拼写游戏和躺着背大字模式；侧边栏面板打开，也可作为单个 HTML 文件独立运行。
 - [xiaoshihou514/dsh-desktop-pet](https://github.com/xiaoshihou514/dsh-desktop-pet) — 鲸鱼娘桌宠，桌面端！
 - [xiekai886/dsh-MusicPlayer](https://github.com/xiekai886/dsh-MusicPlayer) — 可折叠/展开、自由拖动的悬浮音乐播放器，接入网易云音乐，支持歌单导入和按歌名或歌手搜索单曲导入，边对话边听歌。
+- [xrn1997/dsh-novel](https://github.com/xrn1997/dsh-novel) — 在 DSH Web GUI 里读网络小说：导入 legado 书源、跨源聚合搜索、带进度的书架与连续滚动阅读，并给 AI 助手五个小说工具——搜索、读章、导入与探针验证书源、查书架。
 - [Yang-wudi/dsh-kun-like-pet#kunpet-dsh](https://github.com/Yang-wudi/dsh-kun-like-pet/tree/main/packages/kunpet-dsh) — 住在 DSH Web 界面右下角的坤坤桌宠：随 Agent 状态切换动作，任务完成时播放「你干嘛~哎哟」。
 - [yushi-xxh/dsh-homepage-skin](https://github.com/yushi-xxh/dsh-homepage-skin) — 给 dsh web 铺上 DeepSeek Harness 首页同款背景：WebGL 流体光效、点线网格与数字点云鲸鱼，深色/亮色两套配色。
 - [yyh-001/dsh-meme](https://github.com/yyh-001/dsh-meme) — 聊天表情包：纯文本斗图、情绪主动发图、像 QQ/微信 一样发图、AI 自动学图、自定义表情包。
