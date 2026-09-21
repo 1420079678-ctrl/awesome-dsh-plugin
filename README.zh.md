@@ -1809,6 +1809,7 @@ dsh plugin --profile web add dshmarket
 - [vshulcz/deja-vu#extensions/dsh](https://github.com/vshulcz/deja-vu/tree/main/extensions/dsh) — 读取本机上其他二十二个编程智能体已经写下的会话文件——Claude Code、Codex、Cursor、VS Code Copilot Chat、opencode、OpenClaw、Hermes、Kimi、Cline、Zed 等，包括安装之前的历史：提供 deja_recall、deja_session、deja_blame、deja_fix、deja_how、deja_remember 六个工具与 /deja 命令，并可选地把召回结果加入运行时上下文。本地 BM25 索引，不用大模型，不用向量嵌入，不联网（dsh plugin --profile web add dsh-deja）。
 - [vv5v5/dsh-memory-archive](https://github.com/vv5v5/dsh-memory-archive) — 面向 DeepSeek Harness 的记忆库 + 提示词查看器：把被压缩折叠掉的内容重新变得取得到——浏览历史会话或 Tavern 周目归档（摘要、原文、状态）并全文检索；逐轮查看模型真正收到的提示词，列出每个 system 段落的顺序、字数、偏移、哈希与可变性，附装配地图、注册表导出，以及段落为空或日志读不出时的如实诊断。可选一键生成 RP preset。
 - [w4xxx/dsh-xia-plugins#packages/gameassist-memory](https://github.com/w4xxx/dsh-xia-plugins/tree/main/packages/gameassist-memory) — 单文件持久陪伴记忆：把兴趣、偏好、任务与过往作品摘要注入系统提示词，提供读取与更新工具。
+- [webkubor/dsh-mirror](https://github.com/webkubor/dsh-mirror) — 让模型主动记下你的判断依据（原则/红线/工作方式），跨会话复用 —— 有容量上限、会遗忘、每条都说得出为什么记。0.7.0 重构为画像式速写，带证据追溯与红线硬约束，告别冷冰冰的数据库列表。
 - [weibaohui/context-razor](https://github.com/weibaohui/context-razor) — 上下文剃刀：把当前会话上下文逐条列出（角色/预览/≈token 估算），超阈值标红，勾选后不经 LLM 精确裁剪，删了什么一目了然。
 - [weibaohui/hermes-loop](https://github.com/weibaohui/hermes-loop) — 自动复盘：对话收尾后自动把有价值的经验蒸馏成可复用的技能（skill）存入技能库，支持信号加速触发、手动立即复盘、审批模式与技能库治理（归档/恢复，永不直接删除）。
 - [woshishadowhunter/dsh-seed-society](https://github.com/woshishadowhunter/dsh-seed-society) — 面向 dsh-mneme 的记忆巩固调优（开启 autoDream、放大输出预算、deepseek-chat 路由）与 llm-deepseek 推理力度修复，附带可审计智能体运行时 seed-society 的 MCP 工具桥与六个唯识种子技能。
