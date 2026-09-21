@@ -1354,7 +1354,7 @@ dsh plugin --profile web add dshmarket
 ### 🆔 身份与通信
 
 - [AgentConnect/dsh-awiki](https://github.com/AgentConnect/dsh-awiki) — 为 DeepSeek Harness 智能体提供基于开放协议ANP的原生身份，以及基于该身份的私聊、群聊、邮件和智能体间通信能力。
-- [BOWLUNA/dsh-custom-mode#editor](https://github.com/BOWLUNA/dsh-custom-mode/tree/main/editor) — 在设置页里构建并管理 dsh 模式：每个模式以官方 standard / PTC / 极简 / Cordis 的组成为底子，逐行开关它挂载哪些插件、改模式名、编辑它的系统提示词——提示词是普通文件，agent loop 每次模型调用前重新读取，改完对正在运行的会话下一步即生效。没碰过的行与出厂行逐字节相同（含平台条件）。
+- [BOWLUNA/dsh-custom-mode#editor](https://github.com/BOWLUNA/dsh-custom-mode/tree/main/editor) — 自定义模式管理器 / 多助手管理器：在设置页里给每个模式写一份自己的系统提示词——自定义提示词就是普通文件，agent loop 每次模型调用前重新读取，改完对正在运行的会话下一步即生效；模式以官方 standard / PTC / 极简 / Cordis 的组成为底子，可逐行开关它挂载哪些插件，等于每个模式一份自定义插件组合，也能改模式名。多个助手可并存、各有各的提示词，所以一台机器上可以同时留一个编码助手、一个聊天搭子、一个角色扮演（RP）人格，新建会话时挑一个。没碰过的行与出厂行逐字节相同（含平台条件）。
 - [CAI-MH/dsh-reply-language](https://github.com/CAI-MH/dsh-reply-language) — 通过系统提示词强制模型全程使用指定语言回复（默认中文简体），可用工具随时切换。
 - [chenbin-dev/dsh-auth-everying](https://github.com/chenbin-dev/dsh-auth-everying) — 把本机的 Claude、Codex、Grok、Gemini、Copilot、OpenCode 与 CC Switch 配置导入 DeepSeek Harness，支持的提供方可直接 OAuth 登录。
 - [Freakz2z/dsh-catgirl-plugin](https://github.com/Freakz2z/dsh-catgirl-plugin) — DeepSeek Harness 的省 token 人格运行时：本地渲染猫娘风味，并支持渐进式工具 schema 披露。
@@ -1856,6 +1856,7 @@ dsh plugin --profile web add dshmarket
 - [AbcdefgXW/dsh-toolbox-web](https://github.com/AbcdefgXW/dsh-toolbox-web) — Web 界面工具箱：会话/回收站/子目录/搜索/预设/配置管理、标签分组、长消息折叠，以及支持 IM 渠道推送的定时心跳。
 - [AbnerAI/dsh-monitor](https://github.com/AbnerAI/dsh-monitor) — 常驻后台监视器：文件收件箱（NDJSON）或命令输出增量一到就唤醒 agent，相当于 Claude Code Monitor 工具的 Harness 实现。
 - [acebang0303/dsh-quick-launch](https://github.com/acebang0303/dsh-quick-launch) — 一键创建、更新或删除 DeepSeek Harness 桌面快捷方式，图标可自定义上传切换，蓝白金鲸鱼悬浮按钮可拖动，点击旋转 90° 弹出面板。
+- [activeing123/dsh-mcptoon](https://github.com/activeing123/dsh-mcptoon) — 把 mcptoon 作为一条 stdio MCP 服务接入，让 agent 通过 mcptoon 的压缩视图发现已配置 MCP server 的工具，而非每轮支付完整 JSON schema。附带 doctor CLI：校验 mcptoon 可执行文件能否解析，不能时打印精确的 command/args 覆盖配置。
 - [adithyanraj03/dsh-graft-plugin](https://github.com/adithyanraj03/dsh-graft-plugin) — Shows which graft index a dsh session is serving and whether it still matches the code, and gives the model graft_ask, graft_grep, graft_callers, graft_skeleton and graft_map as native tools.
 - [agentmail-to/dsh-agentmail](https://github.com/agentmail-to/dsh-agentmail) — 用 AgentMail 给 agent 配一个自己的收件箱：发信、读信、搜索与打标签共十一个工具；收到的邮件按邮件线程分派，每个线程对应一个独立会话；所有外发邮件都要过审批与收件人白名单。
 - [Aik358/dsh-ark9canvas](https://github.com/Aik358/dsh-ark9canvas) — DSH 生图工作台与 Agent 生图工具：一个工具（ark9_generate_image）走任意 OpenAI 兼容图片 API 文生图/图生图。渠道完全由用户自行添加——默认零预置，自带 baseURL、Key 与模型名即可（支持手动输入任意模型名）。Agent 发起的生图默认需用户审批：请求进入浮窗审批页，批准才开始生成并计费；审批非阻塞——Agent 立即回复"等你审批"，结果、拒绝或超时以通知注入后续轮次并自动汇报。玻璃拟态浮窗五页签（生成/审批/提示词/记录/说明）、比例网格（质量预算+16px 对齐）、透明背景、批量最多 10 张（子任务聚合，部分成功也返回）、提示词库（自定义 JSON 来源经宿主代理拉取）、生成记录持久化与一键重试、多渠道聚合与逐渠道拉模型、中英双语界面、线性 SVG 图标、配置导入导出。安装 dsh-better-sidebar 自动注册侧栏页签；与 dsh-cua 共存时自动堆叠其悬浮按钮上方。
