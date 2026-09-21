@@ -1357,6 +1357,7 @@ dsh plugin --profile web add dshmarket
 ### 🆔 身份与通信
 
 - [AgentConnect/dsh-awiki](https://github.com/AgentConnect/dsh-awiki) — 为 DeepSeek Harness 智能体提供基于开放协议ANP的原生身份，以及基于该身份的私聊、群聊、邮件和智能体间通信能力。
+- [Awoodwhale/dsh-agent-persona](https://github.com/Awoodwhale/dsh-agent-persona) — 按工作区路径或会话 ID 分发 system prompt 人设（完全一致 / 前缀 / 包含 / 正则），可指定一条默认人设兜底；会话页有「人设」页签，能看到实际发出去的提示词；人设列表可导入导出；另有一个开关拒绝工具写入人设存储。
 - [BOWLUNA/dsh-custom-mode#editor](https://github.com/BOWLUNA/dsh-custom-mode/tree/main/editor) — 自定义模式管理器 / 多助手管理器：在设置页里给每个模式写一份自己的系统提示词——自定义提示词就是普通文件，agent loop 每次模型调用前重新读取，改完对正在运行的会话下一步即生效；模式以官方 standard / PTC / 极简 / Cordis 的组成为底子，可逐行开关它挂载哪些插件，等于每个模式一份自定义插件组合，也能改模式名。多个助手可并存、各有各的提示词，所以一台机器上可以同时留一个编码助手、一个聊天搭子、一个角色扮演（RP）人格，新建会话时挑一个。没碰过的行与出厂行逐字节相同（含平台条件）。
 - [CAI-MH/dsh-reply-language](https://github.com/CAI-MH/dsh-reply-language) — 通过系统提示词强制模型全程使用指定语言回复（默认中文简体），可用工具随时切换。
 - [chenbin-dev/dsh-auth-everying](https://github.com/chenbin-dev/dsh-auth-everying) — 把本机的 Claude、Codex、Grok、Gemini、Copilot、OpenCode 与 CC Switch 配置导入 DeepSeek Harness，支持的提供方可直接 OAuth 登录。
@@ -2169,6 +2170,7 @@ dsh plugin --profile web add dshmarket
 - [omicverse/dsh-omicos](https://github.com/omicverse/dsh-omicos) — 在持久 Python 内核里跑 OmicVerse/OmicOS 生信分析，附能力目录检索、内核变量查看与账号订阅页签。
 - [oomol-lab/dsh-oomol](https://github.com/oomol-lab/dsh-oomol) — 将 DeepSeek Harness 接入由 OOMOL 管理的应用与服务，支持渐进式发现并执行 Connector Actions，并提供用于管理 Provider 连接的应用内面板。
 - [opdsh/unity-plugin](https://github.com/opdsh/unity-plugin) — 通过官方 unity CLI 在 DSH 中操作 Unity 编辑器：实时场景命令、编辑器内 C# 求值、运行时命令发现，均复用常驻的 unity shell 会话；另有原始 CLI 通道用于建工程、跑测试与构建。同时挂载 Unity 官方技能集，以及插件自带的 Unity 工作流与 Asset Store 技能。
+- [OtterMind/sqlx#sqlx-dsh](https://github.com/OtterMind/sqlx/tree/main/integrations/dsh) — OtterMind SQLX 数据库工具：列出已保存的数据源、查看或测试连接、执行 SQL、打开本地结果页，缺少 sqlx CLI 时首次调用自动安装。
 - [ouli-1242/dsh-plugin-tool-management](https://github.com/ouli-1242/dsh-plugin-tool-management) — DSH 的 MCP、技能、场景、记忆、子智能体、提示词与归档会话，一个面板统一管理；五域各自注入上下文、采纳统计可见、场景可上锁。
 - [Pappet/dsh-tool-imagegen](https://github.com/Pappet/dsh-tool-imagegen) — 通过 OpenRouter 统一 Image API 的文生图与图生图：以别名配置模型，参数按实时模型能力列表校验，支持参考图输入、设置卡片与对话内联展示结果。
 - [pearjelly/deep-blend#bundle](https://github.com/pearjelly/deep-blend/tree/main/packages/deepblend/bundle) — 在 DSH 里渲染并迭代 Blender 场景：16 个工具覆盖场景规格、预览、视觉评审与交付渲染，带不可变 revision 与审批闸门。
