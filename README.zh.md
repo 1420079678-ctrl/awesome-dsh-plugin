@@ -1746,6 +1746,7 @@ dsh plugin --profile web add dshmarket
 - [Luisarg03/dsh-memory-vault#memory-mcp](https://github.com/Luisarg03/dsh-memory-vault/tree/main/packages/memory-mcp) — 经 MCP stdio 把 Agent 接入持久化 OKF 记忆库：Python 服务端（SQLite FTS5 + Markdown），10 个工具用于检索与写入决策、事实和偏好。
 - [luxiwusuobuneng/dsh-plugin-context-manager](https://github.com/luxiwusuobuneng/dsh-plugin-context-manager) — DeepSeek Harness 上下文管理：每轮对话自动总结为记录并按优先级排序注入，⭐ 置顶记录跨会话继承，自定义文本每轮注入；真实对话任意范围折叠成摘要真省 token，全状态持久化重启不丢。注意：非标准一键安装——需手动将三个包目录复制到 profiles/node_modules、粘贴 cordis.patch.yml 接线并重启 DSH。
 - [madage/dsh-self-improved](https://github.com/madage/dsh-self-improved) — DeepSeek Harness 长期记忆与自进化插件：L0 对话捕获 → L1 记忆提取 → L2 场景归纳 → L3 用户画像，自动召回注入 + 技能合成，纯本地（SQLite FTS5 + jieba，可选向量召回）。
+- [Marquez807/dsh-experience-memory](https://github.com/Marquez807/dsh-experience-memory) — 跨会话经验记忆：只有带可核实出处的经验才会到达模型，相关的内容每轮注入，没人用的会被退役。
 - [Max-Null/dsh-memory](https://github.com/Max-Null/dsh-memory) — 跨会话明文记忆：确定性 BM25 关键词召回（无向量嵌入），memory_save/list/search/confirm/forget 五个工具 + 人工确认闸门，global/project 两层 JSON 存储（project 随 git 分享）。
 - [melandlabs/opencontext#dsh-opencontext](https://github.com/melandlabs/opencontext/tree/main/plugins/dsh-opencontext) — 为 DeepSeek Harness 接入 OpenContext，提供跨会话持久记忆、提示词自动捕获与召回、会话摘要、结构化洞察和文档检索。
 - [memorax-ai/dsh-patchouli](https://github.com/memorax-ai/dsh-patchouli) — 面向 DeepSeek Harness 的记忆与知识中台：在兼容插件之间路由 update、retrieve 和 subscribe 调用，并提供可选的事务化 Rust 后端。
@@ -2797,7 +2798,7 @@ dsh plugin --profile web add dshmarket
 - [Edisonzszs/web-clone](https://github.com/Edisonzszs/web-clone) — 网站复刻方法论 skill：以「真源码至上」决策树覆盖静态站、React/Vue/Next 内容站与 WebGL/Canvas 重前端站，强制核对二手 AI 分析里的可执行代码，内置 13 个零依赖 Node 脚本（CDP 浏览器侦察、素材/字体抓取、路由爬取、source map 挖掘、像素 diff 审计）。
 - [EIGHTfs/dsh-skill-scoreboard](https://github.com/EIGHTfs/dsh-skill-scoreboard) — DSH 的 Skill 使用记分板：同时记录按会话去重与每次加载两种次数，统计 skill 工具调用与直接 read skill 文件两种记分来源，设置页三选项卡（Skill 排行 / 会话榜 / 管理）展示，支持分页与记分 JSON 导入导出。
 - [eve1329/dsh-shared-handoff](https://github.com/eve1329/dsh-shared-handoff) — 共享交接套件的 dsh 版:handoff 与 task-id-bootstrap 技能 + host 侧自动化——基线状态注入、每轮快照与 Auto Log 轨迹、task=<id> 路由、续接关键词重注入、达阈值报警的压缩守护、子代理只读保护;与 Codex、Claude、pi 版写同一份 .agents/state/,一个仓库多代理共享交接。
-- [FeatherHunter/dsh-mattpocock-skills-deck](https://github.com/FeatherHunter/dsh-mattpocock-skills-deck) — Matt Pocock 技能面板（DSH Deck）：安装即自带 25 个工程与效率技能（mattpocock/skills v1.2.3，triage、grilling、wayfinder、handoff 等），右侧面板直接调用，无需手动装技能。主力支持 GitHub issue；Markdown 本地文件为预览版；GitLab 暂不在支持范围。希望它能帮你把想法更快变成现实。
+- [FeatherHunter/dsh-mattpocock-skills-deck](https://github.com/FeatherHunter/dsh-mattpocock-skills-deck) — 安装即自带mattpocock/skills v1.2.3的25个工程与效率技能，无需手动装技能。300亿token打造。本插件在原始技能之上提供10倍的开发效率。主力支持GitHub issue；Markdown为预览版；GitLab暂不支持。
 - [ffseika0304/code-ownership-audit](https://github.com/ffseika0304/code-ownership-audit) — 判定 Python 代码是原创还是演绎作品：给出与上游最长相同表达片段、逐条豁免依据和风险清单。纯标准库 `ast` 分析——离线运行，不调用模型。
 - [fishzjp/qa-skills](https://github.com/fishzjp/qa-skills) — 软件测试全流程技能包：10 个技能覆盖需求分析、测试策略、用例编写与审查、E2E（Playwright）与 API 自动化、探索式测试、回归范围与 Bug 分析，共享知识库提供格式规范、风险模型与 Schema 校验脚本。
 - [FuncWei/dsh-wechat-mp-studio](https://github.com/FuncWei/dsh-wechat-mp-studio) — 微信公众号内容生产工作台：防低创作度结构轮换写作法、低创作度整改实战、祝福图视觉基线、gpt-image 配图管线与 OCR 验收、小绿书草稿网页接口实测参数。
