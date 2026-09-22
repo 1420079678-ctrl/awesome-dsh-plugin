@@ -1843,6 +1843,7 @@ dsh plugin --profile web add dshmarket
 - [text2future/flowix#dsh-flowix-memory](https://github.com/text2future/flowix/tree/main/dsh-flowix-memory) — 将本地 flowix-cli 注册为 MCP 服务，让 agent 可以搜索、读取、创建和编辑 Flowix 备忘与思维导图产物。
 - [tinqiao-oss/engramory#plugin](https://github.com/tinqiao-oss/engramory/tree/master/adapters/dsh/plugin) — 给 DeepSeek Harness 的长期记忆，以纯 markdown 保存：一条事实一个文件，任何编辑器都能打开。索引 `MEMORY.md` 有 200 行 / 25KB 的硬上限，由 `ctx.tools.guard()` 强制执行——让已超限的索引继续变大的写入会被拒绝，而缩小它的重写一律放行，于是过大的索引可以一步步压缩下来。插件不会自行写入记忆，记什么由你和模型决定。同一个记忆库也被 Claude Code、Codex、Kiro、OpenClaw 使用。
 - [TodayJin/dsh-trilogy](https://github.com/TodayJin/dsh-trilogy) — DeepSeek Harness 的项目记忆插件。每个工作区三份 Markdown 文件（PROJECT.md / DECISIONS.md / SESSIONS.md）：会话首个步骤自动创建、内容变了才重新注入（被上下文压缩挤掉也会重注入），并按分类经 memory_checkpoint 工具写回，在「干了实事却没记录」时给一次收尾提醒。memory_read 与 memory_search 可读活日志与归档，后者走零依赖 BM25 索引。会话日志上限 200 条，溢出搬进 SESSIONS-archive.md —— 不自动注入，但可见、可读、可搜，并能逐条恢复。设置界面：带路径筛选的工作区列表 / 三份记忆文件与归档的只读页签 / 重新读取 / 单个工作区记忆包的导出导入（JSON）/ 两步确认的清除 / AGENTS.md 指令段的重写或移除面板 / PROJECT.md 陈旧提醒。输入框状态图标显示该工作区的同步状态，无记忆时可点击创建。零依赖——不含向量库、embedding 或模型调用。
+- [tr1v3r/dsh-ltm](https://github.com/tr1v3r/dsh-ltm) — 基于本地 SQLite 的长期记忆，支持 CJK 分词检索、BM25 与字符 n-gram 余弦重排、去重和生命周期管理。
 - [truelove-dreamer/dsh-plugin-recall](https://github.com/truelove-dreamer/dsh-plugin-recall) — 跨会话记忆：全文检索所有历史会话（复用 ctx.sessionQuery 的 SQLite FTS5 索引），把最强匹配片段带回当前上下文。
 - [TuringCorp-net/mosaic-memory-compress](https://github.com/TuringCorp-net/mosaic-memory-compress) — 为 DeepSeek Harness 提供基于自然遗忘曲线的就地对话压缩：近期对话逐字保留、中期结构化脱水（零 LLM 成本）、久远对话折叠为有界摘要对——有限记忆预算上的无限对话。
 - [Tyan66666/billion-context-dsh](https://github.com/Tyan66666/billion-context-dsh) — 模型驱动的上下文压缩（Active Context Pruning）：由模型决定何时压缩、压缩什么。
@@ -3907,6 +3908,7 @@ dsh plugin --profile web add dshmarket
 - [lonelymoon87/dsh-guardian](https://github.com/lonelymoon87/dsh-guardian) — 增加危险操作策略检查、输出脱敏和安全审查工作流。
 - [Luawig/dsh-cloudflare-access](https://github.com/Luawig/dsh-cloudflare-access) — 在 DSH Origin 校验 Cloudflare Access JWT，使 Settings、凭据、Agent Preset 管理与模型发现可在远程主机名下使用。
 - [LWLAymh/dsh-edit-guardian](https://github.com/LWLAymh/dsh-edit-guardian) — 文件修改 diff 栏与保留/撤销汇总，以及对 bash/pwsh 危险命令的审批与标红。
+- [Martlet-Tech/dsh-approval-explain](https://github.com/Martlet-Tech/dsh-approval-explain) — 在审批卡片上加一个「解释」按钮：一次模型调用返回固定三行解读——做什么、读写改了什么、是否安全（风险等级加一句理由）。同时补上 `write`/`edit` 类调用详情区留白的问题——官方渲染器只读 `command` 字段，那两类调用没有该字段。
 - [maxmilian/dsh-sonarqube](https://github.com/maxmilian/dsh-sonarqube) — 面向 SonarQube Community Build 的只读工具：实例状态、分支或 PR 的项目质量阈、议题与安全热点搜索、单个热点详情，以及覆盖率、重复率或调用方指定的度量项。议题与热点结果附带标准化的位置信息，包含组件 key、文件路径、行号与文本范围。
 - [Mengshang-spec/dsh-plugin-trustlens](https://github.com/Mengshang-spec/dsh-plugin-trustlens) — 只读 DSH 插件审查器：静态扫描、当前会话模型审查和启用前确认。
 - [MicroMilo/upstream-radar](https://github.com/MicroMilo/upstream-radar) — 持续监控 DSH 与插件发布，在一次性隔离环境中复测精确发布物，发布机器可读的兼容性证据，并在修复后自动核对和关闭受管理的问题。
