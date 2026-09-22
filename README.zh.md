@@ -1901,6 +1901,7 @@ dsh plugin --profile web add dshmarket
 - [bescriptkiddie/dsh-wechat-collector](https://github.com/bescriptkiddie/dsh-wechat-collector) — 公众号素材采集：扫码登录的多套凭证档案、带冷却保护的限流安全抓取、RSS 第二水源，以及凭证隔离的 ContentStudio 来源卡交接。
 - [bill277048-hash/DSH-guardian#dsh-guardian](https://github.com/bill277048-hash/DSH-guardian/tree/main/packages/dsh-guardian) — dsh-guardian 守护程序面板：在 dsh WebUI 中启动、停止并查看两个 macOS LaunchAgent 的状态、日志尾行与明确的失败提示。
 - [bitsmug/dsh-bgjobs](https://github.com/bitsmug/dsh-bgjobs) — 将命令提交为独立于 DSH 进程的后台任务（可选沙箱），关闭 DSH 也不影响运行，并提供实时网页面板与离线 CLI/GUI 管理。当前仅支持Windows系统。
+- [BOWLUNA/dsh-zcode-farm](https://github.com/BOWLUNA/dsh-zcode-farm) — 多实例 ComfyUI 编排：探测每个已配置 ComfyUI 端点的 GPU、空闲显存与队列深度，再把生成任务派给最空闲且满足条件的实例。提供三个工具（comfyui_farm_status、comfyui_farm_pick、comfyui_farm_run）。一个实例只有在可达、空闲显存不低于要求、且队列不深于上限时才算候选；候选按「空闲显存 － 队列深 × 权重」排序，因此空闲的浅队列胜过忙碌的大显存。零运行时依赖。探测失败可选重试——跨 SSH 隧道的一次超时不足以证明实例已下线。
 - [bpc-oss/dsh-routed-subagent](https://github.com/bpc-oss/dsh-routed-subagent) — 新增 subagent_routed 工具：从任意会话发起一次性子 Agent，并完整挂载到任意 agent preset 上运行，支持按次覆盖模型/提供方，并在调用前预检模型可用性。
 - [buhuikongpan/dsh-win-gitbash](https://github.com/buhuikongpan/dsh-win-gitbash) — 面向 Windows 的 Git Bash 工具：通过 Git for Windows 自带的 bash 执行命令，支持超时、沙箱、输出截断与后台任务，替代卡顿的 pwsh 工具与仅限 WSL 的 bash 工具。
 - [bwndlct/dsh-session-audit](https://github.com/bwndlct/dsh-session-audit) — 会话执行分析：步骤、工具调用、失败、重复动作、token 用量与验证信号，输出 text/Markdown/JSON 报告。
@@ -3209,6 +3210,7 @@ dsh plugin --profile web add dshmarket
 - [andyfan1094/dsh-github](https://github.com/andyfan1094/dsh-github) — Web GUI 的 GitHub 账号与本地 Git 工作流插件，支持 clone、快进 pull、status、commit、push，推送默认关闭并有宿主侧开关保护。
 - [AngelosZou/dsh-github-router](https://github.com/AngelosZou/dsh-github-router) — 面向 agent 的只读 GitHub 访问，封装多个工具。在工具内部自动探测与选择本地可用的 GitHub 访问设施，并自动尝试网络代理。减少 Agent 在访问 GitHub 时可能遇到的网络问题或解析问题，减少 Agent 频繁尝试不同方案的开销。
 - [Binaryinject/dsh-review-checkout](https://github.com/Binaryinject/dsh-review-checkout) — Codex 风格的会话文件修改审查：每轮变更卡片（可接管 shell 的 edited 卡片）、语法高亮 diff 审查标签（真实行号、按行打开、可拖拽分栏）、跟随 DSH 主题的深浅双套配色、内置工具按轮一键撤销——基于官方会话通道。
+- [BOWLUNA/dsh-zcode-git](https://github.com/BOWLUNA/dsh-zcode-git) — 给 DeepSeek Harness 智能体用的结构化 Git 工具：status、diff、log、branch、commit 与 stash。输出由十项 `git -c` 覆盖钉死，因此用户的 pager、颜色或 quotepath 设置无法改变智能体读到的东西；每次调用都是 argv 数组，任何 shell 都不解析参数；写入动作走 harness 的审批服务，没有装审批服务时拒绝执行而不是放行。
 - [BrambleXu/dsh-revdiff](https://github.com/BrambleXu/dsh-revdiff) — DeepSeek Harness 原生交互式 Git diff 审查，支持结构化批注并回传当前 Agent 会话。
 - [Cerbur/clutch-dsh#clutch-dsh-worktree](https://github.com/Cerbur/clutch-dsh/tree/main/packages/clutch-dsh-worktree) — 为 DSH Web UI 增加按 Git Worktree 组织 Session 的视角，同时继续由 DSH 管理原始 Project 和 Session 数据。
 - [cirelir/dsh-change-review](https://github.com/cirelir/dsh-change-review) — 会话修改审查插件：追踪会话内 write/edit 工具调用并展示 diff 对比；会话隔离、子代理聚合、SSE 实时推送、角标与颜色自定义。
