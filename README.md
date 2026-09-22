@@ -1029,7 +1029,6 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 ### Themes & Appearance
 
 - [0nt-one/dsh-neo-skin](https://github.com/0nt-one/dsh-neo-skin) - Neo-brutalism skin with two switchable schemes (Blue Command / Aged Newspaper), hard shadows, sharp corners, and light/dark theme support.
-- [aerince/dsh-models-dev-reasoning](https://github.com/aerince/dsh-models-dev-reasoning) - Adds models.dev reasoning levels to unconfigured third-party DeepSeek Harness models.
 - [AKS1st/dsh-cyber-particle](https://github.com/AKS1st/dsh-cyber-particle) - Particle-network background overlay for the DSH Web shell: full-screen, click-through, zero runtime dependencies.
 - [AKS1st/ikun-theme-skin](https://github.com/AKS1st/ikun-theme-skin) - IKUN fandom skin for the DSH Web UI: star-blue and black-gold palettes in the system theme list, full-screen photo wallpaper rotation, a music box, and a send-button voice line.
 - [alexfengrui/dsh-client-ui-skin-real-madrid](https://github.com/alexfengrui/dsh-client-ui-skin-real-madrid) - Real Madrid dual-mode skin: Bernabeu night stadium for dark, white-kit pinstripes with crest and 1902 layers for light. Unofficial fan work.
@@ -1183,6 +1182,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [2404723600/dsh-router-loomy](https://github.com/2404723600/dsh-router-loomy) - Registers the Xunfei Loomy cloud channel as an OpenAI-compatible supplier in dsh-router, adding model listing and streaming chat completions.
 - [a981008/dsh-switch](https://github.com/a981008/dsh-switch) - Mirrors cc-switch providers and models into DeepSeek Harness the moment they are saved, and shows each provider's plan windows, account balance, or custom usage script in the composer and the settings card.
 - [AdonisSheldon/dsh-openai-oauth](https://github.com/AdonisSheldon/dsh-openai-oauth) - Connect a ChatGPT account to Codex models in DeepSeek Harness through browser PKCE or device-code OAuth, with automatic token refresh and Web or headless login.
+- [aerince/dsh-models-dev-reasoning](https://github.com/aerince/dsh-models-dev-reasoning) - Adds models.dev reasoning levels to unconfigured third-party DeepSeek Harness models.
 - [amlyczz/dsh-agy-link](https://github.com/amlyczz/dsh-agy-link) - Google Antigravity (agy CLI) models for DSH — streaming chat with Gemini/Claude/GPT-OSS subscriptions, native tool cards, thinking turns, and in-GUI Google OAuth login.
 - [Ansonfishing/dsh-model-manager](https://github.com/Ansonfishing/dsh-model-manager) - Control panel for local LLM inference servers in the DSH web view: service registry with health checks and stop controls, named parameter profiles for llama.cpp, SGLang and vLLM with pre-save KV/VRAM validation, GPU detection, and tok/s benchmarks.
 - [antonio-mastropaolo/dsh-anthropic-membership](https://github.com/antonio-mastropaolo/dsh-anthropic-membership) - Sign in to DeepSeek Harness with a Claude Pro/Max membership (no API key), downscale Anthropic request images to a 2000px long edge, slim /compact summarizer payloads, and show 5-hour/weekly plan usage plus DSH message counts.
