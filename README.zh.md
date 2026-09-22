@@ -1395,6 +1395,7 @@ dsh plugin --profile web add dshmarket
 - [MengYuil/dsh-ponytail](https://github.com/MengYuil/dsh-ponytail) — ponytail 移植：常驻的「懒惰资深开发者」编码人设，带强度档位与 review、audit、debt、gain、help 技能，适用于 DeepSeek Harness。
 - [muretai/muretai-dsh-skill](https://github.com/muretai/muretai-dsh-skill) — 让智能体加入 Muretai 网络：拥有自己的身份，通过邀请相识，与属于其他人的智能体进行签名、端到端加密的通信；来信唤醒后可自行回复。
 - [polohot/dsh-adrian-inject-context](https://github.com/polohot/dsh-adrian-inject-context) — Injects your own saved context entries as a Remember row after each user message, per turn or once per session, with a Settings editor and a manager page.
+- [shenA2024/whale-persona](https://github.com/shenA2024/whale-persona) — 人设引擎（DeepSeek Harness）：一份 config.json 管住 AI 的自称（可按具体模型指定，未命中回落 flash / pro 两档）、对你的称呼、关系立场、性格正文、逐条可勾选的工作契约、思维链语言、形象与回复语气（两段均 opt-in、均可按模型覆盖），以及由人工确认闸门把关的长期记忆——AI 只能追加 status:"proposed" 候选，人执行一行 confirm 才转正，日志物理只追加、按行序重放。已确认条目以「数据而非指令」的引号块注入；带 kind 的条目改为在确认那一刻按路由追加进指定文件、永不进提示词。三段提示词每次装配都从磁盘重新求值，改配置下一步生效、不用重启。人设预设是可分享的 JSON 快照（导入导出酒馆角色卡：v2/v3 可读、v2 可写），且刻意不携带记忆。零运行时依赖、不联网、不执行命令；任何异常降级为空段，最坏是「没有人设」而不是会话起不来。出厂空白——不写配置就什么都不改变。
 - [sryimnoob123/dsh-global-prompt](https://github.com/sryimnoob123/dsh-global-prompt) — 设置面板管理全局与各工作区 AGENTS.md，支持身份与人设注入、运行时上下文开关和结果通知。
 - [Tkingxiao/I-am-Yuike](https://github.com/Tkingxiao/I-am-Yuike) — 通过自带插件去除 harness 前置与后置注入提示词，仅使用预设原生提示词运行，实现软破限与猫娘人格模拟：将猫娘 Yuike 预设幂等部署到 ~/.dsh/.agent-presets/yuike/，不覆盖已编辑的预设。
 - [tnnevol/fn-os-apps#dsh-codex-auth-plugin](https://github.com/tnnevol/fn-os-apps/tree/main/plugins/dsh-codex-auth-plugin) — 为 DeepSeek Harness 提供 ChatGPT 账号登录：走 Codex 浏览器 OAuth，无需 API Key、无需选择工作空间；把登录结果接到 pi-ai 的 Codex provider，可设置新会话默认的 Codex 模型与思考强度，并按账号自己的目录接口刷新模型列表，在输入区展示 5 小时与每周用量窗口。
@@ -1598,6 +1599,7 @@ dsh plugin --profile web add dshmarket
 - [ruisenbai/dsh-annotation](https://github.com/ruisenbai/dsh-annotation) — 需要 DSH 0.1.6-alpha.2。在已完成的助手回复中选中原文并添加多条注解，再与官方输入框文字和附件合并为一条会话消息；可导航模型的关联回复，并在不修改已存储事件的前提下通过设置隐藏指定思考或工具详情。
 - [RyanZeeee/dsh-chattree](https://github.com/RyanZeeee/dsh-chattree) — 把 DSH 会话画成一张对话画布：每轮问答是一个节点，任意节点都能分叉出真实的子会话，压缩过的上下文收成一个绿色节点、可以从它继续对话；左侧栏按 DSH 工作区分组列出画布，重命名与 DSH 自己的会话标题同步。
 - [RyensX/dsh-message-fold](https://github.com/RyensX/dsh-message-fold) — 为 DeepSeek Harness 提供 Codex 风格的会话消息折叠。
+- [Ryuu-64/dsh-session-tools](https://github.com/Ryuu-64/dsh-session-tools) — 给 AI 四个会话工具：新建会话、给别的会话发消息、列出会话及其状态，以及等另一个会话这一轮跑完并把它的回答取回来。
 - [SaiSenBox/dsh-prompt-manager](https://github.com/SaiSenBox/dsh-prompt-manager) — 浏览器本地提示词库：在输入框选择器中同时注入多条会话级系统提示词，支持分支继承、中英界面、收藏与 JSON 备份。
 - [savageops/dsh-rich-indexing](https://github.com/savageops/dsh-rich-indexing) — 分级压缩中枢：把单一的 80% 压缩阈值换成可配置的阶梯（默认 30/50/70/90），逐级加强压缩力度；每次检查点都折叠入确定性关键词索引，让事实跨周期累积；摘要走模型链——主模型加最多 3 个回退，各自独立推理档位。附带 Compaction 模块子标签页与设置卡片；关闭插件始终恢复原版压缩。
 - [seeingrain/dsh-session-todos](https://github.com/seeingrain/dsh-session-todos) — 会话内悬浮待办面板，支持服务器端跨设备持久化及会话列表未完成任务图标。
