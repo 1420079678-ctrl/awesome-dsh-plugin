@@ -1974,7 +1974,8 @@ dsh plugin --profile web add dshmarket
 - [duhu2000/qcc-mcp-legal-oauth](https://github.com/duhu2000/qcc-mcp-legal-oauth) — 一键 OAuth（PKCE）授权接入企查查法律产品——法律数据 MCP 服务（法规检索、案例检索）：动态注册客户端、token 自动刷新、动态配置 mcp-client 条目，一次授权覆盖法规与案例服务。
 - [duhu2000/qcc-mcp-oauth](https://github.com/duhu2000/qcc-mcp-oauth) — 一键 OAuth（PKCE）授权接入企查查 MCP 服务：动态注册客户端、token 自动刷新、动态配置 mcp-client 条目，一次授权覆盖全部企查查数据服务。
 - [DYF-zs/dsh-qboson-ising-solver](https://github.com/DYF-zs/dsh-qboson-ising-solver) — 将 QBoson Kaiwu 的 Ising 矩阵求解能力作为 solve_ising Agent Tool 接入 DeepSeek Harness。
-- [Edge-Echo/dsh-mcp-bridge](https://github.com/Edge-Echo/dsh-mcp-bridge) — 精选 MCP 服务器全家桶：一键接入演示、记忆、文件系统、GitHub、Playwright、远程 HTTP 等服务器，自带连通性验证工具与 CI 检查。
+- [Edge-Echo/dsh-mcp-bridge](https://github.com/Edge-Echo/dsh-mcp-bridge) — DeepSeek Harness 的 MCP 服务器安装与验证工具：交互式 init 会把真实 patch 条目写进 profile，list 与 validate 检查配置，CI 强制的验证器逐个连接精选服务器。
+- [Edge-Echo/dsh-netassist](https://github.com/Edge-Echo/dsh-netassist) — DSH 的网络与代理诊断工具：检查系统代理设置、探测本地代理端口、识别 TUN 适配器、测试 GitHub/TCP/HTTP 连通性、扫描 hosts 冲突，并给出具体的修改建议。
 - [EdgeTypE/dsh-better-deepseek](https://github.com/EdgeTypE/dsh-better-deepseek) — [Better DeepSeek](https://github.com/EdgeTypE/better-deepseek) Chrome 扩展桥接插件：在 webServer 上提供 HTTP 握手与会话过滤的 SSE 事件流，实现浏览器扩展 UI 与 DeepSeek Harness 的集成。
 - [Electricitysheep/dsh-tool-turbo](https://github.com/Electricitysheep/dsh-tool-turbo) — dsh 每轮推理强度优化器——简单工具调用自动降档、重任务回升，削减工具调用间的思考时间。
 - [Emilia-awa/hermes-dsh-bridge](https://github.com/Emilia-awa/hermes-dsh-bridge) — 内嵌 MCP server，让外部 Agent（Hermes、Claude Code 等）通过 StreamableHTTP 驱动 DeepSeek Harness：同步/异步任务执行、三档文件沙箱、Web 审批桥、会话管理与搜索、路径隔离的文件工具。
@@ -2465,6 +2466,7 @@ dsh plugin --profile web add dshmarket
 - [173787247/dsh-wsl-workspace](https://github.com/173787247/dsh-wsl-workspace) — 列出 WSL 发行版并校验可用于 DSH 的 Linux 工作区路径。
 - [173787247/dsh-wsl-wslconfig](https://github.com/173787247/dsh-wsl-wslconfig) — 只读查看 Windows .wslconfig，并给出内存与 mirrored 网络建议。
 - [6Mikao9/dsh-wsl-workspace](https://github.com/6Mikao9/dsh-wsl-workspace) — 从 Web GUI 添加 WSL 工作区，无需在 WSL 之中再次安装 dsh 以及相关工具，bash 命令与文件读写运行在本机 WSL 发行版内，Windows 文件仍可访问。
+- [Edge-Echo/dsh-win-toolkit](https://github.com/Edge-Echo/dsh-win-toolkit) — 面向 DSH agent 的 Windows 原生工具：剪贴板读写、系统通知、hosts 文件查看与网络诊断，均返回结构化数据（带 UI 卡片），底层为防注入的 PowerShell。
 - [jack-ranbo/dsh-wsl-expose](https://github.com/jack-ranbo/dsh-wsl-expose) — 从 WSL2 走 IPv6/IPv4 经反向代理（Lucky）把 DSH Web GUI 暴露到公网：/wan up 一键建立 socat 中继、Windows portproxy、防火墙与 trusted-host 白名单；域名与端口可在设置卡片或命令中配置。
 - [Jumqyc/dsh-wsl-gpufix](https://github.com/Jumqyc/dsh-wsl-gpufix) — 为 WSL2 上的 DSH Landlock 沙箱追加 /dev/dxg 与 /proc 的读写授权，使受限的 agent bash 会话中也能使用 CUDA。
 - [liyu34/dsh-wsl-tray](https://github.com/liyu34/dsh-wsl-tray) — 为运行在 WSL 的 DSH 提供 Windows 桌面快捷方式和系统托盘启动器：完全隐藏启动，托盘菜单支持打开/重启/退出，插件配置页可管理快捷方式。
@@ -3041,6 +3043,7 @@ dsh plugin --profile web add dshmarket
 - [fxylabs/superself#dsh-plugin](https://github.com/fxylabs/superself/tree/main/apps/dsh-plugin) — 把 Superself 的 self CLI 暴露为模型工具（项目上下文、工作单元、报告、决策）并提供 /self 命令——跨会话、跨项目的项目状态，保存在代码仓库之外。
 - [gezi-wen/dsh-subagent-delegation](https://github.com/gezi-wen/dsh-subagent-delegation) — 携带一份讲「什么该交给子 agent 做、而不是自己顺手做」的技能——哪些任务值得扇出、一次派几个、并行怎么发，以及子 agent 回来后怎么核对它真的做了什么，而不是信它的总结。
 - [GM-HZ/agent-dag-workflow](https://github.com/GM-HZ/agent-dag-workflow) — 面向 Agent 的 Host-neutral 持久化 DAG 工作流，提供 CLI、MCP、按需 Skill、Trigger、重放和可视化 Canvas。
+- [godv61/dsh-task-engine](https://github.com/godv61/dsh-task-engine) — 为 DeepSeek Harness 提供预设工程流程：dev_task 工具把阶段流转、产物、验证、审核与提交范围做成硬门禁，并带一个安装项目级与个人级技能和规则的工作台。
 - [GooDAnDReaDY/dsh-cron](https://github.com/GooDAnDReaDY/dsh-cron) — 为 DeepSeek Harness 提供定时任务、后台自动化与 Agent 执行。
 - [GooDAnDReaDY/dsh-kanban](https://github.com/GooDAnDReaDY/dsh-kanban) — 为 DeepSeek Harness 提供可视化看板，支持 Gitea 任务、工作流列和每任务独立 Agent 会话。
 - [gsh150801/dsh-bioinf-verify](https://github.com/gsh150801/dsh-bioinf-verify) — 面向科研报告的整篇校验工作流：逐条核对 Crossref、PubMed（含撤稿扫描）、ClinicalTrials.gov、UniProtKB、GEO/SRA 和 PatentsView，核验 URL 可访问性与标题一致性，以温度 0 判定声明与原文含义一致，输出可恢复的审计账本与标注版校验报告。
