@@ -1487,7 +1487,7 @@ dsh plugin --profile web add dshmarket
 - [heiheiha798/dsh-plugin-subagent-delete](https://github.com/heiheiha798/dsh-plugin-subagent-delete) — 带归属校验的工具与 HTTP 路由，用于列出、释放和永久删除子代理会话，删除后自动刷新 web UI。
 - [hellodigua/dsh-share](https://github.com/hellodigua/dsh-share) — 一键分享你的对话。
 - [hkkz9522/dsh-session-manager](https://github.com/hkkz9522/dsh-session-manager) — DSH Web 会话管理：删除、归档、跨工作区移动、迁移预设；收藏、待看、搜索、排序、设置优先级、添加（手动/半自动）标签和备注。欢迎至 GitHub 提意见。
-- [hoyyang/dsh-concise](https://github.com/hoyyang/dsh-concise) — DeepSeek Harness 一键 Concise 输出风格开关：结果先行、少废话，工作深浅不变。每轮最终回答开头自动附「摘要」精华卡（划选即复制），按会话独立生效，headless/CLI 同样生效，支持 /concise 命令、style.md 自定义风格与本地 API。摘要卡内的链接与文件路径渲染为可点击 chip：网页跳转、本地文件用系统默认应用打开（v0.9+）。
+- [hoyyang/dsh-concise](https://github.com/hoyyang/dsh-concise) — DeepSeek Harness 一键 Concise 输出风格开关：结果先行、少废话，工作深浅不变。每轮最终回答开头自动附「摘要」精华卡（划选即复制），按会话独立生效，headless/CLI 同样生效，支持 /concise 命令、style.md 自定义风格与本地 API。摘要卡内的链接与文件路径渲染为可点击 chip：网页跳转、本地文件用系统默认应用打开（v0.9+）。每步生成前自动重申摘要契约（v0.11.2+），实测根治审查报告/表格型回复的漏卡。
 - [HrxSpace/dsh-session-sweeper](https://github.com/HrxSpace/dsh-session-sweeper) — 会话清道夫：在 DSH 设置中扫描、查看并安全清理本机 AI 终端会话历史（Claude Code、Codex CLI、WorkBuddy、DSH），隔离优先、带 SHA-256 清单与一键整批恢复，彻底删除需输入确认短语。
 - [ht719/dsh-session-categories](https://github.com/ht719/dsh-session-categories) — 为 Web 侧边栏添加按 Workspace 隔离的分类树，支持嵌套分类、拖拽归类会话、在分类中新建会话，以及删除分类时归档其中的会话。
 - [huajuan2024/dsh-session-manager](https://github.com/huajuan2024/dsh-session-manager) — 设置 → 插件 下的会话管理面板：列出全部会话的标题、工作目录、agent 预设、更新时间、轮次与步数，展开可查看消息历史，删除非运行中的会话，并经浏览器 Blob URL 导出为 JSON 或 Markdown。
@@ -2272,6 +2272,7 @@ dsh plugin --profile web add dshmarket
 - [SiriLee/dsh-edit-approval](https://github.com/SiriLee/dsh-edit-approval) — 每次 edit 与 bash 调用前都会询问：编辑前展示红绿行级 diff，命令前展示描述与命令面板——同意一次或拒绝，两个 gate 各带独立总开关（Settings → General）。
 - [siruignaw-sys/dsh-tool-bandit-search](https://github.com/siruignaw-sys/dsh-tool-bandit-search) — 使用上下文赌博机算法（Thompson 采样）学习何时使用快速搜索、何时使用深度搜索的 `search` 工具。 
 - [Smalldy/godot-bridge](https://github.com/Smalldy/godot-bridge) — DSH↔Godot 引擎运行时控制桥：通过游戏内置 TCP 交互服务器启动并操控运行中的 Godot 4.x——16 个工具（约 130 条运行时命令、场景/UI 检查、GDScript eval、输入模拟、截图、headless 静态操作、项目编辑、导出、脚本编译检查、引擎路径设置），替代 godot-mcp。
+- [Snowball-labbot/Portfolio-OS#dsh-portfolio-os](https://github.com/Snowball-labbot/Portfolio-OS/tree/main/plugins/dsh-portfolio-os) — DSH 内的自包含个人资产与投研工作台：支持本地注册、资产导入与配置视图、市场和新闻跟踪、研究库及用户自行配置的 AI 简报；内置 Windows Runtime，数据保存在本机。
 - [sojo-negai/dsh-prompt-refine](https://github.com/sojo-negai/dsh-prompt-refine) — A ✨ button left of the send button: reads the draft and recent turns, asks the configured model for three suggestions each pairing an issue with a patch, lets you tick them individually with a live preview of the merged prompt, and writes the result back to the composer without sending.
 - [somnusovis/dsh-multi-workspace](https://github.com/somnusovis/dsh-multi-workspace) — 多工作区沙箱：自动赋予所有已注册工作区的文件写入权限——添加工作区后即可直接写入，无需配置或提权。
 - [songer522/dsh-launcher](https://github.com/songer522/dsh-launcher) — DSH Web 服务的 macOS 菜单栏应用，以及它所读取的 Host 插件：插件把运行中服务的端口、PID 与带 token 的 URL 写入 ~/.config/dsh-launcher/runtime.json，并在停止时删除，因此即使服务器是从终端启动的，也能在状态栏完成启动、打开、重启与停止。
