@@ -939,6 +939,7 @@ dsh plugin --profile web add dshmarket
 - [nonewind/dsh-spend](https://github.com/nonewind/dsh-spend) — DSH Web 用量与费用统计插件：右下角悬浮窗，按模型/按天/按会话多维聚合与预计花费。
 - [null5069/dsh-better-stats](https://github.com/null5069/dsh-better-stats) — DSH Web 输入框下方的增强统计条：官方人民币计价（峰谷分时、价目自动同步）、多模型分账、实时计时、子代理树合并、余额直连、预算预警与流式成本估算。
 - [OK-wx/dsh-ocgo-lite](https://github.com/OK-wx/dsh-ocgo-lite) — 输入框下方常驻 OpenCode Go 用量条：5 小时/每周/每月配额圆环，DSH 会话 token 与花费统计（官方实时定价），支持按模型与按「本次会话」范围联动明细（本次会话实时更新），一键复制 API Key。
+- [olimc2016/dsh-token-meter-panel](https://github.com/olimc2016/dsh-token-meter-panel) — 在 DeepSeek Harness 侧栏加入 Token 用量与花费面板，显示今日消费、预算进度、7 天与 30 天趋势、成本构成、缓存命中省下的钱，以及按会话明细。
 - [pan17/dsh-minimax-usage](https://github.com/pan17/dsh-minimax-usage) — 在 DSH Web UI 模型选择器旁显示 MiniMax Token Plan 用量，以紧凑的 5h/7d 进度条展示，支持点击刷新、空闲与心跳自动刷新及接口回退；复用「设置 → 模型」中的订阅 Key，且仅在 MiniMax Token Plan provider 下显示。
 - [ParticleLight/dsh-all-usage](https://github.com/ParticleLight/dsh-all-usage) — 支持跨多个模型、供应商、工作区与时间范围进行统一分析，并可在全部保留历史中自定义起止日期；实时呈现缓存命中率，并可分别查看模型和供应商的分类数据；单日趋势按小时、跨日趋势按日，提供 53 周 GitHub 风格热力图、连续使用、模型与工作区 Token 占比环图及 Token、成本、占比明细，以及可独立自由组合的筛选；支持查询 DeepSeek 账户余额、管理工作区别名及导出 CSV 数据；独立账本在会话删除前持久化用量，工作区被删除时同样保留并把用量汇总为一行「已删除」，增量重建只处理新增事件；重启时未变化会话不回读日志、直接复用账本（以每会话日志 revision 为变更信号）；工作区注册表通过 DSH 的 domain/changed 事件自动探针同步——只对新增/删除的工作区增量重扫，未变化的已有工作区直接复用已计算账本、零全量重扫，统计严格限定已注册工作区（未登记目录一律忽略），扫描完成后通过轻量 revision 状态判断，只有 Host/统计状态变化才获取完整历史，并显示 revision 复用、实际读取、账本恢复和失败等非敏感同步健康信息；全 0 用量的重放不会覆盖已记录的真实用量，Token 口径显式声明（输入不含缓存命中，缓存读写与推理独立成桶）。中文使用本地时区，英文统一使用 UTC；API 仅限本机访问。
 - [PerryLink/dsh-budget](https://github.com/PerryLink/dsh-budget) — 在 llm/stream 瀑布上做按插件粒度的用量预算与费用上限：按模型用量记账、会话与月度预算的预警/阻断、延迟窗口与碳足迹估算。
@@ -1431,6 +1432,7 @@ dsh plugin --profile web add dshmarket
 - [Coprexist/dsh-session-recovery](https://github.com/Coprexist/dsh-session-recovery) — 从原始磁盘恢复被删除或损坏的 dsh 会话（session.jsonl.zstd）与记忆库（memory.db），并通过 web 界面中的 /session-repair 命令修复重建后无法续接的会话。
 - [cq-guojia/dsh-session-title-pattern](https://github.com/cq-guojia/dsh-session-title-pattern) — 把 dsh 会话标题统一成「日期｜类型｜主题」（类型与主题由模型对整段对话总结），并支持可逆的会话隐藏：暂时不用的会话从侧边栏收起，不删除、随时一键显示回来。
 - [czm15053/dsh-peer-link](https://github.com/czm15053/dsh-peer-link) — 让 dsh 和 Claude Code 会话直接互发消息，附带可点击的会话列表卡片（搜索/刷新/弹窗发送）。
+- [DDDMUC/dsh-delete-turn](https://github.com/DDDMUC/dsh-delete-turn) — DSH 消息删除插件：按条删除用户消息、按步骤删除思考与工具调用、按整条回复删除助手回答，经官方 surface-replace 契约从模型上下文移除并从可见转录隐藏，原始 append-only 日志不改写。
 - [delock/dsh-whats-up](https://github.com/delock/dsh-whats-up) — What's up · 在忙啥——零维护的会话动态看板:host 端扫描全部会话,为每个会话提取「目标 + 一句话现状」(多 provider LLM、按指纹缓存),自动发现做到一半、问了没回、近期在推进的事,点卡片一键跳回会话。
 - [domitor-syh/dsh-rollback](https://github.com/domitor-syh/dsh-rollback) — TRAE 式「回退到本轮对话发起前」插件：按轮次建立检查点（10 轮滑动窗口），同时回滚工作区文件与原位截断模型上下文，保持同一 session id。回退只能由人发起：/rollback 命令或每轮的 Web 回退按钮（被中断的轮次也可用），弹窗逐条列出受影响文件及其动作（恢复/找回/删除/跳过）。
 - [dongsheng123132/task-passport](https://github.com/dongsheng123132/task-passport) — 通过机器可读检查点与乐观锁，在 DeepSeek Harness、WorkBuddy、Claude Code 和 Codex 之间交接持久任务状态。
@@ -1600,6 +1602,7 @@ dsh plugin --profile web add dshmarket
 - [tuogusa/dsh-session-tags](https://github.com/tuogusa/dsh-session-tags) — 为会话添加标签，并在 Web 设置面板中按标签搜索会话。
 - [txlznbzsdj-collab/dsh-session-delete](https://github.com/txlznbzsdj-collab/dsh-session-delete) — 在侧边栏会话菜单添加「删除」项，经二次确认后硬删除该会话。
 - [Ultronen/dsh-archived-chats](https://github.com/Ultronen/dsh-archived-chats) — 管理已归档会话，支持搜索、预览、恢复、按工作区批量归档和回收站管理。
+- [Voellin/dsh-deephub-share#dsh-deephub-share](https://github.com/Voellin/dsh-deephub-share/tree/main/packages/dsh-deephub-share) — 将一条 dsh 会话提炼为脱敏后的思路，端到端加密投递给 DeepHub 上的朋友；收到的思路落为一条新会话。
 - [weibaohui/dsh-continue](https://github.com/weibaohui/dsh-continue) — 自动续跑：agent 会话中断后自动续上，规则表按失败类型（限流/额度/鉴权/上下文超限/崩溃孤儿）路由——自动退避重试、换模型继续、压缩上下文后继续或止损通知，规则可视化编辑，全程活动日志。
 - [weibaohui/dsh-smart-title](https://github.com/weibaohui/dsh-smart-title) — 会话智能标题：每轮对话结束后用一次独立的辅助 LLM 调用对「用户消息+助手回答」的完整转写做总结，标题跟随会话真实主题而不是复述第一句话；首条消息即时出题、内置标题失败在后续轮次自动重试、用户手动改名绝不被覆盖、自动跳过子代理与 fork 会话。
 - [wenhao4126/dsh-session-delete](https://github.com/wenhao4126/dsh-session-delete) — DSH 会话管理：可归档或删除单个会话，工作区行可归档全部、恢复已归档或删除全部会话，设置页可查看/恢复/删除已归档会话；归档时备份工作区信息，恢复时自动恢复原工作区，原工作区被删除时自动重建。
