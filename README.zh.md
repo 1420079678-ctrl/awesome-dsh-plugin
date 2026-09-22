@@ -2916,6 +2916,7 @@ dsh plugin --profile web add dshmarket
 - [QWE13-ART/dsh-skill-folder](https://github.com/QWE13-ART/dsh-skill-folder) — 折叠 DSH 技能目录提示面：KV 缓存稳定渲染 + BM25/bge-m3 混合技能检索 + 可选自动路由提示。
 - [redfox-data/redfox-community-dsh](https://github.com/redfox-data/redfox-community-dsh) — 100+ 多平台社媒数据技能 + 40 个原生 MCP 工具（数据 API、AI 搜索、AI 生成），一键安装。
 - [RempleXI/word-docx-writer](https://github.com/RempleXI/word-docx-writer) — 用简单标记稿生成并排版中文 Word（.docx）文档，使用内置标题样式、宋体与 Times New Roman 字体，图表题注按章自动编号。
+- [RrcoVer0/dsh-webnovel-writer](https://github.com/RrcoVer0/dsh-webnovel-writer) — 为现有 Agent 添加基于文件记忆的中文网文策划、逐章写作、一致性审校、回滚与文风画像技能。
 - [ruiyukirin/dsh-douyin-oem-touliu-report](https://github.com/ruiyukirin/dsh-douyin-oem-touliu-report) — 抖音本地推 OEM 广告日报/周报自动生成（作者：Kirin）：一次 Edge 登录后自动采集三大数据源（来客客资、计划级投放明细、视频分析），计算指标并生成 A4 排版 docx 报告，支持自由选择定时运行时间和邮件通知。
 - [ryasrk/dsh-awesome-skills](https://github.com/ryasrk/dsh-awesome-skills) — 安装一个 skill 路由技能：按需对本地技能库做语义检索，让庞大的技能库不占每轮的模型目录。
 - [sandbaseai/sandbase-skills](https://github.com/sandbaseai/sandbase-skills) — 通过文件系统 Skill provider 将 88 个研究、社交情报、营销与商业 Agent Skills 挂载到 dsh。
