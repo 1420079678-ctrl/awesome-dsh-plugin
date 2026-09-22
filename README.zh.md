@@ -586,6 +586,7 @@ dsh plugin --profile web add dshmarket
 - [runcat-tommy/dsh-chinese-poetry](https://github.com/runcat-tommy/dsh-chinese-poetry) — 免 token 诗词查询插件，在会话页头新增「诗词」标签页，支持搜索、筛选、飞花令、每日一首、收藏、简繁、节日专题与分享卡片图；AI 解读复用 DSH 会话。
 - [runcat-tommy/dsh-panda-calendar](https://github.com/runcat-tommy/dsh-panda-calendar) — 会话页头的「熊猫日历」标签页：公历/农历、干支、生肖、24 节气、传统与外国节日、中国法定节假日（含调休）、多城市天气、时间戳转换（秒/毫秒 ↔ 年月日时分秒，可选时区）与内置离线的「历史上的今天」，数据免费、无需 API Key。
 - [runcat-tommy/dsh-view-manager](https://github.com/runcat-tommy/dsh-view-manager) — DSH 视图标签管理器（逃咪）：管理会话页头视图标签（对话/轨迹）——启停、隐藏、排序与重命名，文案随界面语言中英切换，并带 npm 更新提醒。
+- [Ryuu-64/dsh-find-all](https://github.com/Ryuu-64/dsh-find-all) — 给 DSH 桌面 App 补上 Cmd/Ctrl+F 查找栏，搜的是整段会话：命中落在还没显示出来的历史里时，插件会把更早的消息分页加载进来再搜一遍，命中计数和高亮因此覆盖整段会话，而不只是屏幕上那一截。
 - [s3yf1337/dsh-desktop#bundle](https://github.com/s3yf1337/dsh-desktop/tree/main/bundle) — dsh 桌面配置：原生 Tauri 窗口承载 harness Web 界面，支持托盘、原生通知、文件管理器面板与一键更新。
 - [SA1992X/dsh-ctrl-enter-submit](https://github.com/SA1992X/dsh-ctrl-enter-submit) — 让对话框中普通 Enter 换行、Ctrl/Cmd+Enter 提交，可在设置中开关。
 - [sailoumili/dsh-sidebar-plus](https://github.com/sailoumili/dsh-sidebar-plus) — 基于 DSH 官方侧边栏的文件视图增强插件，提供源码视图、原位编辑、行号显示、搜索和字体缩放功能。
@@ -3167,7 +3168,7 @@ dsh plugin --profile web add dshmarket
 - [titanwings/dsh-plannotator](https://github.com/titanwings/dsh-plannotator) — 计划批注：选中计划原文逐条批注，结构化反馈送回 Agent。
 - [Tkingxiao/dsh-novel-solo](https://github.com/Tkingxiao/dsh-novel-solo) — DeepSeek Harness 的「单核写作」插件：面向量化小模型做了充分的工具瘦身与输出加固，适合在本机用本地模型跑长篇小说流水线。
 - [tong-io/tongflow#dsh-tongflow](https://github.com/tong-io/tongflow/tree/main/packages/dsh-tongflow) — 基于 TongFlow 的“片场”插件，用于图片、配音、音乐与视频制作：agent 为每个资产生成 TongFlow 工作流文件（.tongflow.json）并通过 TongFlow 插件执行，内嵌工作流画布，按镜头/角色/take 组织项目，附漫剧模板；以 @tongflow 开头的会话进入 Studio 界面。
-- [toolclub/dsh-agent-team-gui](https://github.com/toolclub/dsh-agent-team-gui) — 持久化多模型小队在 Settings 中配置、从 Composer 选择，并支持逐成员模型与工具策略；主 Agent 为每次发送动态规划有界 DAG，并可执行有界的审阅/修复质量回路；Run Center 展示重试和基于 Harness 官方 usage 事件的逐成员 token 用量。
+- [toolclub/dsh-agent-team-gui](https://github.com/toolclub/dsh-agent-team-gui) — 持久化多模型小队在 Settings 中配置、从 Composer 选择，并支持逐成员模型与工具策略。默认由主 Agent 自行完成简单任务，需要已保存的小队时才派工；派工按有界 DAG 执行，并可进行有限的审核与返工。Run Center 展示重试和基于 Harness 官方 usage 事件的逐成员 token 用量。
 - [toustifer/agentflow](https://github.com/toustifer/agentflow) — 基于 Git 工作树任务隔离、状态门禁交付与外置记忆的 AI 智能体软件生命周期编排引擎。
 - [truelove-dreamer/dsh-plugin-hooks](https://github.com/truelove-dreamer/dsh-plugin-hooks) — Claude Code 风格生命周期 hooks：工具调用前后自动执行 shell 命令（stdin 收 JSON payload），pre-tool 非零退出即阻断调用。
 - [ttmouse/dsh-taskboard](https://github.com/ttmouse/dsh-taskboard) — 内嵌于 DSH Web GUI 的完整本地优先任务看板：看板/列表/Gantt/工作流/仪表盘视图、任务 AI 对话、附件与标签、dsh-routines 驱动的待办自动认领——数据存本地 SQLite（dsh plugin add @ttmouse/dsh-taskboard）。
