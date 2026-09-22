@@ -1177,7 +1177,6 @@ dsh plugin --profile web add dshmarket
 - [amlyczz/dsh-agy-link](https://github.com/amlyczz/dsh-agy-link) — 将 Google Antigravity (agy CLI) 接入 DSH：无 API Key 使用 Gemini/Claude/GPT-OSS 订阅模型，支持流式对话、原生工具卡片、思考轮次注记及 Web 界面 Google OAuth 扫码登录。
 - [Ansonfishing/dsh-model-manager](https://github.com/Ansonfishing/dsh-model-manager) — DSH Web 视图中的本地 LLM 推理服务控制面板:服务注册表与健康检查/停止控制、llama.cpp / SGLang / vLLM 命名参数 profile(保存前做 KV/显存校验)、GPU 探测与 tok/s 测速。
 - [antonio-mastropaolo/dsh-anthropic-membership](https://github.com/antonio-mastropaolo/dsh-anthropic-membership) — 用 Claude Pro/Max 会员登录 DeepSeek Harness（无需 API key），将 Anthropic 请求图片长边压到 2000px，精简 /compact 摘要请求，并显示 5 小时/每周套餐用量百分比与 DSH 消息数。
-- [aosi526/dsh-workbuddy-xdpool](https://github.com/aosi526/dsh-workbuddy-xdpool) — 把本机 WorkBuddy 桌面 App 登录过的所有账号自动并入 DSH 模型池：多账号轮换自动容错、实时积分，模型目录按模型标注积分倍率与限时免费 / 夜间折扣。
 - [ArcaneOrion/dsh-model-channel-manager](https://github.com/ArcaneOrion/dsh-model-channel-manager) — 模型渠道管理：多个供应商/模型候选共享一条虚拟路由（roundrobin/组），带失败转移、重试、超时与冷却；设置页签可编辑供应商与轮询组、跑测速与单模型真实请求测试，健康面板聚合七天延迟、失败与上游 token 用量（输入、输出、缓存、推理）。
 - [bainianlaoyao/dsh-codex-harness](https://github.com/bainianlaoyao/dsh-codex-harness) — 面向 DeepSeek Harness 上 GPT 模型的 Codex 风格编码工具与 agent 预设：exec_command、write_stdin、apply_patch、view_image，以及 OpenAI Chat Completions 与 Responses API 两条路由，并桥接 DSH 原生的计划、提问、审批与压缩。长命令注册为 DSH 后台作业，输出首尾有界，可用 job_output 读取；每种子代理类型可独立指定 Preset、Provider、Model 与 Reasoning effort。
 - [bainianlaoyao/dsh-llm-api-pool](https://github.com/bainianlaoyao/dsh-llm-api-pool) — 聚合多个 OpenCode Go API key，把每次请求热切换到用量最低的一个，并提供官方用量/余额查询与设置页图形化管理。
@@ -1341,6 +1340,7 @@ dsh plugin --profile web add dshmarket
 - [WSL043/dsh-codex-subscription](https://github.com/WSL043/dsh-codex-subscription) — 通过 ChatGPT OAuth 在 DSH 中使用 Codex 模型，提供订阅联网搜索、额度与安全重置、图片工具、高速模式和模型感知上下文；无需 API Key 或 Codex CLI。
 - [wss534857356/dsh-plugin-codex](https://github.com/wss534857356/dsh-plugin-codex) — 使用本地 Codex 登录的 Codex App Server 模型提供方，支持会话复用、Harness 工具桥接、原生动作轨迹和生成图片持久化。
 - [wyouwd1/dsh-opencode-models](https://github.com/wyouwd1/dsh-opencode-models) — 在 settings.yaml 中管理 OpenCode Zen 免费档与 Go 档模型——实时拉取 opencode.ai 的最新模型列表，按路由对比已配置与线上差异，通过四个 agent 工具和设置页分区增删模型条目。
+- [XDTrees/dsh-workbuddy-xdpool](https://github.com/XDTrees/dsh-workbuddy-xdpool) — 把本机 WorkBuddy 桌面 App 登录过的所有账号自动并入 DSH 模型池：多账号轮换自动容错、实时积分，模型目录按模型标注积分倍率与限时免费 / 夜间折扣。
 - [xiaobbl/dsh-opencode-go-model-list](https://github.com/xiaobbl/dsh-opencode-go-model-list) — 让 DSH 自带的 opencode-go 供应商跟随 opencode Go 套餐的实时模型列表，opencode 上架新模型后无需改配置即可使用。
 - [xiaomao49/dsh-model-probe](https://github.com/xiaomao49/dsh-model-probe) — 直接实测 llm-pi-ai 端点真正接受的能力——从它自己的模型列表取上下文窗口，从它自己的报错反推输出上限与推理档位，用生成的测试图验证图像支持——再报告与证据不符的声明值，确认后才改写。
 - [xiaozhe7772222/dsh-opencode-zen](https://github.com/xiaozhe7772222/dsh-opencode-zen) — 0元接入6个免费大模型，免注册免充值，内置6个免费模型，多Key轮换与限流退避。
@@ -3340,6 +3340,7 @@ dsh plugin --profile web add dshmarket
 - [cdxiaodong/dsh-island](https://github.com/cdxiaodong/dsh-island) — 通过 Unix socket 把 DSH agent 的会话、工具调用与审批实时桥接到 CodeIsland macOS 刘海面板，可直接在面板上批准/拒绝。
 - [cerebrixos-org/tuning-engines-cli#tuningengines-dsh-plugin](https://github.com/cerebrixos-org/tuning-engines-cli/tree/main/packages/tuningengines-dsh-plugin) — 将不含原始内容的 DSH 回合、模型、工具、审批、重试和错误事件导出到 Tuning Engines，用于受治理的追踪、策略评估、成本分析和 Work Session 审阅，并提供磁盘持久化重试队列。
 - [cheesehaqi/dsh-qq-onebot-bridge](https://github.com/cheesehaqi/dsh-qq-onebot-bridge) — 基于 OneBot v11 反向 WebSocket 的 QQ 双向桥：每群/每私聊用户独立会话、@引用语音转文字、私聊图片/动画表情识图、表情与贴纸工具。
+- [chenweigao/dsh-perch-notify](https://github.com/chenweigao/dsh-perch-notify) — dsh 会话的 Webhook 通知：审批被请求或回合结束时发送 POST，可发往 ntfy、Bark、Slack/钉钉/企微机器人地址或任意 HTTPS 端点。
 - [chidaic/dsh-agent-notify](https://github.com/chidaic/dsh-agent-notify) — 任务完成或需要你输入/批准时弹出 Windows 系统通知（浏览器 Notification API）：完成/提问/审批/计划审阅提醒，点击气泡直达会话，支持后台模式，设置页在官方设置 → 任务提示。
 - [chromoany/dsh-notify-me](https://github.com/chromoany/dsh-notify-me) — 消息提醒 / 桌面通知 / 后台回复完成提醒：模型需要你操作（审批、方案确认、提问）或后台回复完成时，弹出系统通知与提示音，并标记标签页标题；设置页可开关提醒、调音量、切换中英文通知语言。
 - [Cloudto1/dsh-approval-chime](https://github.com/Cloudto1/dsh-approval-chime) — DSH 请求审批时响一声提示音；音色、音量与开关在「设置 → 通知提醒」里调。
