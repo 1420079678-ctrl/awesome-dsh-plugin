@@ -345,7 +345,18 @@ jobs:
                   core.info(`#${pr.number}: run is over a month old — GitHub will not re-run it; needs a new push or a local merge`)
                   continue
                 }
-                if (e.status === 403 || e.status === 429) { core.warning(`rate limited — stopping early (${e.status}: ${msg})`); break }
+                // Stop only on an actual rate limit. A 403 is not one by itself:
+                // the first dispatched pass after this logging went in stopped on
+                // "403: This workflow is already running" for #5582 — its author
+                // had just pushed. Enumerating harmless 403s one at a time is how
+                // this loop got here (too-old, then already-running); GitHub's
+                // rate-limit responses, primary and secondary, both say "rate
+                // limit", so match that instead and let everything else fall
+                // through to skip-and-continue.
+                if (e.status === 429 || (e.status === 403 && /rate limit/i.test(msg))) {
+                  core.warning(`rate limited — stopping early (${e.status}: ${msg})`)
+                  break
+                }
                 core.info(`#${pr.number}: could not re-run (${e.status}: ${msg})`)
               }
             }
