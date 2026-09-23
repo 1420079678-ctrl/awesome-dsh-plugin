@@ -2255,6 +2255,7 @@ dsh plugin --profile web add dshmarket
 - [QuantumKuba/dsh-graphify-plugin](https://github.com/QuantumKuba/dsh-graphify-plugin) — 为 DeepSeek Harness 提供原生 Graphify 知识图谱支持，包含 10 个代码智能工具、拓扑搜索、核心节点发现与 PR 影响分析。
 - [QWE13-ART/dsh-tool-folder](https://github.com/QWE13-ART/dsh-tool-folder) — 装了大量 MCP 时折叠工具定义提示面：KV 缓存稳定的静态目录 + BM25/bge-m3 混合 tools_search + tools_schema 批量展开，几百个工具仍可检索，但不必每轮都付完整 schema 的 token。
 - [qwert702/dsh-commander](https://github.com/qwert702/dsh-commander) — dsh 网页端指挥官模式：会话标题栏一键注入协议简报，解析模型回复中的任务块并自动执行，让策略层与执行层分离；通过徽章按钮激活/停用。
+- [RaulLazaro/dsh-jev-plugin](https://github.com/RaulLazaro/dsh-jev-plugin) — 为 DSH 增加 `jev` 工具：就同一段文本向 Jev（TypeSafe System One）提出是/否、选择和评分问题，返回概率与置信度；provider 与 API key 在设置中按用户配置，并带判定账本、花费统计以及每日调用与 token 上限。
 - [Realyujie/dsh-us-stocks](https://github.com/Realyujie/dsh-us-stocks) — 美股行情、历史 K 线、财务报表、分析师共识与新闻，数据来自 yahoo-finance2。
 - [rebornace/dsh-tracescope#dsh-tracescope](https://github.com/rebornace/dsh-tracescope/tree/main/packages/dsh-tracescope) — DSH 右侧栏插件：对比两个 git 提交，根据影响面生成手测清单，支持失败备注、截图、任务附件，以及向云效 / GitHub / GitLab / Webhook 提交缺陷。
 - [rebron1900/dsh-web-search-9router](https://github.com/rebron1900/dsh-web-search-9router) — 9router 网页搜索与网页抓取 provider，为 DeepSeek Harness 提供搜索和抓取能力。
