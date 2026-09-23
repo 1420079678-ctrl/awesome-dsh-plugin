@@ -201,7 +201,9 @@ jobs:
               // without looking at what tree it ran on.
               const checkRanAt = Date.parse(check?.completed_at ?? '')
               const checkStale = checkChangedAt && (!checkRanAt || checkRanAt < checkChangedAt)
-              if (check && check.conclusion !== 'success' && !checkStale) continue
+              const checkRedFresh = check && check.conclusion !== 'success' && !checkStale
+              // The veto itself is applied further down, AFTER the reasons are
+              // computed — see the paragraph above `if (checkRedFresh ...)`.
 
               // Three reasons to re-run, and only three.
               const ranAt = Date.parse(gate?.completed_at ?? '')
@@ -251,6 +253,33 @@ jobs:
               //    a red check is the thing standing between the author and a
               //    merge, and no one else is going to clear it.
               const checkStaleRed = check && check.conclusion !== 'success' && checkStale
+
+              // A fresh red `check` vetoes the re-run — except when the GATE is
+              // the thing blocking. The stale-evidence exemption above handled
+              // a red that predates the check's code; this handles a red that is
+              // current but irrelevant, and it was a deadlock too. #5533: gate
+              // red at "0.0 days old" on 2026-09-20, `check` red on the same run
+              // from the stale-fork guard misfiring ("this PR deletes N entry
+              // files" — its base simply predated entries merged since). The
+              // repository was over two days old by 2026-09-23 and would have
+              // passed; regate ran nine times in between and skipped it every time,
+              // because the veto sat above reason 3 and reason 3 was never
+              // evaluated. Time, the one thing that fixes an age failure, could
+              // not reach it. The paragraph above the old veto already said the
+              // re-run is worth spending because the gate re-evaluates against
+              // current data regardless of what tree `check` ran on — the code
+              // just didn't do what the comment said.
+              //
+              // So `aged` and `unverified` (3, 3b) are exempt: both mean the gate
+              // itself needs re-asking, and neither depends on the tree `check`
+              // checked out. `aged` keeps its 24h cooldown, so the exemption
+              // cannot hammer. `never` stays under the veto: it has no cooldown,
+              // and a PR with a red check and no gate verdict is the one case
+              // where "the gate posts regardless" is the thing in doubt.
+              // `revalidate` and `speculative` stay under it as before — those
+              // re-ask a gate that is already answering, and a red check is a
+              // reason to spend the pass elsewhere.
+              if (checkRedFresh && !aged && !unverified) continue
 
               if (never) blocking.push([pr, runId, 'never gated'])
               else if (unverified) blocking.push([pr, runId, 'gate failed open (neutral) — never verified'])
