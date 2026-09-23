@@ -294,6 +294,26 @@ jobs:
             // exists, then re-checking greens — both oldest verdict first.
             revalidate.sort((a, b) => a[0].number - b[0].number)
             speculative.sort((a, b) => a[0].number - b[0].number)
+            // GitHub refuses to re-run a workflow run created more than a month
+            // ago, and it says so with HTTP 403 — the same status as a rate
+            // limit. This loop used to read every 403 as "rate limited" and stop
+            // the pass. #932's run (created 2026-08-19) crossed 30 days on
+            // 2026-09-18; from then on it sat at the head of the oldest-first
+            // speculative tier, and every pass died on it. Measured across the
+            // eight passes to 2026-09-23: seven ended on #932. The blocking and
+            // revalidate tiers run first, so no blocked PR was cut off — but the
+            // stale-pass tier, the one check that catches a green that went bad
+            // after it was issued (a repo deleted, a force-push below the commit
+            // floor — #1022), processed nothing for five days. 28 open PRs had
+            // runs past the limit that day.
+            //
+            // Such a run can never be re-run, by anyone. A new event is the only
+            // way to get a fresh check: an author push, or a maintainer merging
+            // locally. So skip it, name it, and keep going. And log the message
+            // on every other 403 too — the 06:45 pass on 2026-09-22 stopped on a
+            // 403 for a PR opened that morning, which was not this, and the old
+            // code had thrown away the one line that would have said what it was.
+            const tooOld = []
             for (const [pr, runId, why] of [...blocking, ...revalidate, ...speculative]) {
               if (requeued >= MAX) { core.info(`hit MAX_RERUNS=${MAX}, stopping`); break }
               core.info(`#${pr.number}: ${why}`)
@@ -302,11 +322,18 @@ jobs:
                 core.info(`#${pr.number}: re-ran PR check`)
                 requeued++
               } catch (e) {
-                if (e.status === 403) { core.warning('rate limited — stopping early'); break }
-                core.info(`#${pr.number}: could not re-run (${e.status})`)
+                const msg = String(e.message ?? '').split('\n')[0]
+                if (e.status === 403 && /over a month ago/i.test(msg)) {
+                  tooOld.push(pr.number)
+                  core.info(`#${pr.number}: run is over a month old — GitHub will not re-run it; needs a new push or a local merge`)
+                  continue
+                }
+                if (e.status === 403 || e.status === 429) { core.warning(`rate limited — stopping early (${e.status}: ${msg})`); break }
+                core.info(`#${pr.number}: could not re-run (${e.status}: ${msg})`)
               }
             }
             core.info(`re-queued ${requeued} pull request(s) (${blocking.length} blocked, ${revalidate.length} to re-validate, ${speculative.length} stale-pass candidates)`)
+            if (tooOld.length) core.info(`${tooOld.length} pull request(s) have a check run too old to re-run: ${tooOld.map((n) => '#' + n).join(' ')}`)
 
             } catch (e) {
               if (e.status === 403 || e.status === 429) core.warning(`API quota busy — skipping this pass (${e.status})`)
