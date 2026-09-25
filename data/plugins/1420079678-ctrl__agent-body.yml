@@ -1,6 +1,0 @@
-url: https://github.com/1420079678-ctrl/agent-body
-name: 1420079678-ctrl/agent-body
-category: dev
-description:
-  en: 'The repository-level entry for Agent-Body, an organ-based plugin layer for DeepSeek Harness. The plugin packages in this repository declare themselves organs (26 organs in the catalog) and the kernel supplies the physiology around them: each command becomes a nerve impulse routed to the organ that owns it, a variable-interval heartbeat pumps the current directives and homeostasis warnings system-wide, reflex arcs fire with zero model calls, idle time consolidates run history into memory cards, and a failure is attributed first (missing tool, arguments, permission, timeout, network, not found, conflict) with a re-check that closes the wound only when the organ succeeds again. Tool schemas are gated by the current intent: 84.71% of tool-schema tokens are gated away across 48 commands in the cold-start benchmark committed in this repository. Installable release tarballs; the project Pages site replays a real install.'
-  zh: 'Agent-Body 的仓库级条目：面向 DeepSeek Harness 的器官化插件层。仓库内的插件包各自声明为器官（目录收录 26 个器官），内核提供其余生理活动：每条命令先转成神经冲动并路由到负责它的器官，变速心跳把当前指令与稳态告警泵向全身，反射弧零模型调用即开火，空闲期把运行经历巩固成记忆卡，失败先按键归因（缺工具、参数、权限、超时、网络、不存在、冲突）再决定是否重试，复检在器官下次成功时才闭合伤口。工具 schema 按当前意图显影：仓库内冷启动基准中 48 条命令省下 84.71% 的 tool schema token。Release 提供可安装的 tarball，项目 Pages 站点回放一次真实安装。'
